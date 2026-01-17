@@ -1,0 +1,128 @@
+.select {
+  position: relative;
+
+  &--active {
+    z-index: 10;
+  }
+
+  &__current {
+    position: relative;
+    padding: 12px 36px 12px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 12px;
+    border: 1px solid;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+    transition: border-color $transition-default, border-radius $transition-default;
+
+    &:hover {
+      border-color: $color-primary-light !important;
+    }
+    
+    &--placeholder {
+      color: #9DA2A8;
+    }
+
+    .select--active & {
+      border-color: $color-primary !important;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &__drop-icon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 14px;
+    height: 14px;
+    transform: translateY(-50%);
+    transition: transform $transition-default, color $transition-default;
+
+    .select:hover & {
+      color: $color-primary-light !important;
+    }
+
+    .select--active & {
+      color: $color-primary !important;
+      transform: translateY(-50%) rotate(180deg)
+    }
+  }
+
+  &__list {
+    position: absolute;
+    z-index: -1;
+    top: calc(100% - 1px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 8px;
+    width: 100%;
+    max-height: 300px;
+    background-color: $color-bg;
+    border: 1px solid $color-primary;
+    border-top-width: 0;
+    border-radius: 0 0 12px 12px;
+    font-size: 16px;
+    line-height: 24px;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: transform 0.1s;
+    overflow-y: auto;
+
+    .select--active & {
+      transform: scaleY(1);
+    }
+  }
+
+  &__list-item {
+    flex-shrink: 0;
+    padding: 4px 12px;
+    border-radius: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: background-color $transition-default, color $transition-default;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-bg;
+    }
+
+    &--selected {
+      display: none;
+    }
+  }
+}
+
+// theme
+.theme-light {
+  .select {
+    &__current {
+      border-color: #EDEEF1;
+    }
+
+    &__drop-icon {
+      color: #EDEEF1;
+    }
+  }
+}
+
+.theme-dark {
+  .select {
+    &__current {
+      border-color: #9DA2A8;
+    }
+
+    &__drop-icon {
+      color: #9DA2A8;
+    }
+  }
+}
+

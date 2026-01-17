@@ -1,0 +1,24 @@
+extends pug/base
+    
+append styles 
+    style.
+        .list-page {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--color-primary);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .list-page ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+block content
+    .list-page.container
+        ul
+            li
+                a(href="./main.html", target="_blank") Главная
+
