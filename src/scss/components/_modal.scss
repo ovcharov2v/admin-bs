@@ -31,19 +31,27 @@
 	flex-direction: column;
 	width: 100%;
 	margin: auto;
-	padding: 24px 0;
+	padding: 24px;
 	border-radius: 8px;
 	background-color: $color-bg2;
 	box-shadow: 0 1px 4px #C1C2CB, 0 24px 48px rgba(#C1C4D4, .5);
 	transition: opacity $transition-default, transform $transition-default;
 	
+	.modal--info & {
+	  max-width: 400px;
+	}
+ 
+	.modal--detail & {
+	  max-width: 880px;
+	  min-height: 100%;
+	  transform: translateX(100%);
+	  margin: 0 0 0 auto;
+	  border-radius: 0;
+	}
+ 
 	.modal--show & {
 	  opacity: 1;
 	  transform: none;
-	}
-	
-	.modal--info & {
-	  max-width: 400px;
 	}
   }
   
@@ -51,7 +59,6 @@
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	padding: 0 24px;
   }
   
   &__header {
@@ -59,13 +66,37 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 16px;
+	margin-bottom: 24px;
+	padding-bottom: 14px;
+	border-bottom: 1px solid $color-border;
   }
   
+  &__title-box {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+  }
   
   &__title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
 	font-size: 24px;
-	line-height: 30px;
-	font-weight: 600;
+	line-height: 1;
+	font-weight: 700;
+  }
+  
+  &__title-icon {
+	flex-shrink: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+  }
+  
+  &__subtitle {
+	font-size: 14px;
+	line-height: 1;
+	color: $color-text2;
   }
   
   &__close {
@@ -80,14 +111,14 @@
 	transition: color $transition-default;
 	
 	&:hover {
-	  color: $color-text1;
+	  color: $color-text2;
 	}
   }
   
   &__close-icon {
 	display: block;
-	width: 100%;
-	height: 100%;
+	width: 24px;
+	height: 24px;
   }
   
   &__img {

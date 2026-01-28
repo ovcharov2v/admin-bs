@@ -48,6 +48,10 @@ append styles
             align-items: center;
         }
 
+        .button-list + .button-list {
+            margin-top: 16px;
+        }
+
 block content
     .container
         h2 Тема
@@ -204,3 +208,5 @@ block content
             button.button.button--outline-hover-blue(data-modal="error") Ошибка
             button.button.button--outline-hover-blue(data-modal="smile") Новость
             button.button.button--outline-hover-blue(data-modal="ghost") Ошибка
+        .button-list
+            button.button.button--outline-hover-blue(data-modal="detail") Детали нарушения
