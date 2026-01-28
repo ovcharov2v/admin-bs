@@ -1,11 +1,11 @@
 extends pug/base
     
-append styles 
+append styles
     style.
         .list-page {
             font-size: 20px;
             font-weight: 500;
-            color: var(--color-primary);
+            color: var(--color-text1);
             text-align: center;
             text-transform: uppercase;
         }
@@ -20,5 +20,11 @@ block content
     .list-page.container
         ul
             li
-                a(href="./main.html", target="_blank") Главная
+                a(href="./ui.html", target="_blank") UI
+            li
+                a(href="./login.html", target="_blank") Логин
+            li
+                a(href="./forgot.html", target="_blank") Восстановление пароля
+            li
+                a(href="./cp.html", target="_blank") Панель управления
 

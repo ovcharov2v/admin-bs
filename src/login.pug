@@ -1,0 +1,59 @@
+extends pug/auth
+
+block content
+    .auth
+        .auth__grid
+            .auth__bg-col(style="background-image: url('/images/auth-bg1.png');")
+                +svg("logo").auth__bg-logo
+                .auth__bg-bottom
+                    // group
+                    .label-group.auth__bg-labels
+                        .label.label--dark-violet
+                            span.label__text #Банкинг
+                        .label.label--dark-violet
+                            span.label__text #Фишинг
+                        .label.label--dark-violet
+                            span.label__text #Утечки
+                    p.auth__bg-title Добро пожаловать в систему клиента Brandsecurity
+                    p.auth__bg-text Copyright © Brandsecurity 2024
+            .auth__form-col
+                .auth__form-wrap
+                    .auth__logo
+                        +svg("logo").auth__logo-img
+                        .auth__logo-text
+                            p.auth__logo-name BrandSecurity
+                            p.auth__logo-description drp platform
+                    .auth__form-title-box
+                        p.auth__form-title Авторизация в системе клиента Brandsecurity
+                        p.auth__form-description Пожалуйста введите логин и пароль
+
+                    form.auth__form-box
+                        // group
+                        .form-group.auth__form-group
+                            .form-group__title-box
+                                p.form-group__title Логин
+                            .form-group__input-box
+                                input.form-group__input(type="text", placeholder="Введите логин")
+                                button.form-group__action-btn(aria-label="Очистить", type="button")
+                                    +svg("close").form-group__action-icon
+                        // group
+                        .form-group.auth__form-group
+                            .form-group__title-box
+                                p.form-group__title Пароль
+                            .form-group__input-box
+                                input.form-group__input(type="password", placeholder="Введите пароль")
+                                button.form-group__action-btn(aria-label="Очистить", type="button")
+                                    +svg("close").form-group__action-icon
+
+                        label.checkbox.checkbox--solid.auth__checkbox
+                            input.checkbox__input(type="checkbox")
+                            span.checkbox__text Запомнить меня
+
+                        .auth__form-action-box
+                            a.auth__form-reset-link(href="#") Забыли свой пароль?
+                            button.button.button--blue.auth__form-submit-btn(type="submit") Войти в систему
+
+                .auth__form-bottom
+                    a.auth__form-call-link(href="#") Связаться с нами
+
+

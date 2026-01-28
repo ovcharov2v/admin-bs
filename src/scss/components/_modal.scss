@@ -10,7 +10,8 @@
   height: 100%;
   overflow-y: auto;
   transition: opacity $transition-default;
-  background-color: $color-bg;
+  background-color: rgba(#fff, .2);
+  backdrop-filter: blur(2px);
   
   &__container {
 	display: flex;
@@ -22,11 +23,6 @@
 	opacity: 1;
   }
   
-  &--chat {
-	overflow: unset;
-	background-image: linear-gradient(to top, $color-primary-light, color-mix(in srgb, #{$color-primary} 5%, transparent));
-  }
-  
   &__window {
 	opacity: 0;
 	transform: translateY(20%);
@@ -35,17 +31,19 @@
 	flex-direction: column;
 	width: 100%;
 	margin: auto;
-	padding-top: 24px;
-	padding-bottom: 24px;
+	padding: 24px 0;
+	border-radius: 8px;
+	background-color: $color-bg2;
+	box-shadow: 0 1px 4px #C1C2CB, 0 24px 48px rgba(#C1C4D4, .5);
 	transition: opacity $transition-default, transform $transition-default;
 	
 	.modal--show & {
 	  opacity: 1;
 	  transform: none;
 	}
- 
-	.modal--chat & {
-	  height: 100vh;
+	
+	.modal--info & {
+	  max-width: 400px;
 	}
   }
   
@@ -53,27 +51,7 @@
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	padding: 20px 0;
-	
-	@include desktop {
-	  padding: 40px 0;
-	}
-	
-	.modal--chat & {
-	  flex-grow: 1;
-	  display: flex;
-	  gap: 20px;
-	  height: calc(100% - 300px);
-	  
-	  @include tablet {
-		flex-direction: row;
-		gap: 30px;
-	  }
-	  
-	  @include desktop {
-		gap: 40px;
-	  }
-	}
+	padding: 0 24px;
   }
   
   &__header {
@@ -81,14 +59,6 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 16px;
- 
-	.modal--header-fixed & {
-	  margin-top: 90px;
-	
-	  @include desktop {
-		margin-top: 148px;
-	  }
-	}
   }
   
   
@@ -96,11 +66,6 @@
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: 600;
-	
-	@include desktop {
-	  font-size: 36px;
-	  line-height: 40px;
-	}
   }
   
   &__close {
@@ -111,11 +76,11 @@
 	padding: 0;
 	border: none;
 	background-color: transparent;
-	color: $color-text;
+	color: $color-text1;
 	transition: color $transition-default;
 	
 	&:hover {
-	  color: $color-primary;
+	  color: $color-text1;
 	}
   }
   
@@ -125,249 +90,66 @@
 	height: 100%;
   }
   
-  // modal-question
-  
-  &__question-form {
-	display: grid;
-	grid-template: auto / 100%;
-	grid-gap: 16px;
-	
-	@include tablet {
-	  grid-template: auto / repeat(2,minmax(0,1fr));
-	  grid-gap: 20px;
-	}
-	
-	@include desktop {
-	  
-	  grid-template: auto / minmax(0,1fr) minmax(0, 2.41fr);
-	  grid-gap: 40px;
-	}
-  }
-  
-  &__question-form-box {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-	
-	@include tablet {
-	  gap: 20px;
-	}
-	
-	@include desktop {
-	  gap: 40px;
-	}
-	
-	@media (max-height: 760px) {
-	  grid-gap: 20px;
-	}
-  }
-  
-  &__question-textarea {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	
-	.form-group__input-box {
-	  display: flex;
-	  flex-direction: column;
-	  flex-grow: 1;
-	  
-	  textarea {
-		flex-grow: 1;
-	  }
-	}
-  }
-  
-  &__question-form-text-box {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-  }
-  
-  &__question-form-text {
-	font-size: 16px;
-	line-height: 24px;
-	color: #9DA2A8;
-
-	&--red {
-	  color: $color-primary;
-	}
-
-	a {
-	  text-decoration: underline;
-	  transition: color $transition-default;
-
-	  &:hover {
-		color: $color-primary;
-	  }
-	}
-  }
-
-  // modal-chat
-  &__chat-hero {
-	flex-shrink: 0;
-	display: none;
-	width: 150px;
-	height: 150px;
-	margin-top: auto;
-	
-	@include desktop {
+  &__img {
+	.modal--info & {
 	  display: block;
+	  width: 60px;
+	  height: 60px;
+	  margin: 0 auto 32px;
 	}
   }
-
-  &__chat-hero-img {
-	display: block;
-	width: 100%;
-	height: 100%;
+  
+  &__title-text {
+	.modal--info & {
+	  margin-bottom: 16px;
+	  font-size: 24px;
+	  line-height: 1;
+	  font-weight: 700;
+	  text-align: center;
+	}
   }
-
-  &__chat-main {
-	position: relative;
+  
+  &__text {
+	.modal--info & {
+	  margin-bottom: 32px;
+	  font-size: 14px;
+	  line-height: 1.2;
+	  text-align: center;
+	}
+  }
+  
+  &__btn-box {
 	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	height: 100%;
-  }
-
-  &__chat-messages {
-	flex-grow: 1;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	overflow: auto;
- 
-	mask-image: linear-gradient(
-					to bottom,
-					transparent,
-					black 20px,
-					black calc(100% - 20px),
-					transparent
-	);
-  }
-
-  &__chat-message {
-	display: flex;
-	flex-direction: column;
-	gap: 6px;
+	gap: 8px;
 	
-	&:not(:last-child) {
-	  margin-bottom: 20px;
-	}
-
-	&--incoming {
-	  align-items: flex-start;
-	}
-
-	&--outgoing {
-	  align-items: flex-end;
+	.modal--info & {
+	  flex-direction: column;
+	  min-width: 90px;
+	  margin: 0 auto
 	}
   }
-
-  &__chat-message-bubble {
-	padding: 12px 16px;
-	border-radius: 12px;
-	max-width: 80%;
-
-	@include desktop {
-	  padding: 14px 18px;
-	  max-width: 70%;
-	}
-
-	.modal__chat-message--incoming & {
-	  border-bottom-left-radius: 0;
-	  background-color: $color-bg;
-	}
-
-	.modal__chat-message--outgoing & {
-	  border-bottom-right-radius: 0;
-	  background-color: $color-primary-light;
-	  color: #fff;
-	}
-  }
-
-  &__chat-message-text {
-	font-size: 15px;
-	line-height: 22px;
-
-	@include desktop {
-	  font-size: 16px;
-	  line-height: 24px;
-	}
+  
+  &__link {
+	padding: 0;
+	border:none;
+	background-color: transparent;
+	font-size: 12px;
+	line-height: 1.2;
+	color: #4259E9;
 	
-	strong {
-	  font-weight: 600;
-	}
- 
-	a {
+	&:hover {
 	  text-decoration: underline;
-	  transition: color $transition-default;
-	
-	  &:hover {
-		color: currentColor !important;
-	  }
 	}
-  }
-
-  &__chat-form {
-	position: sticky;
-	padding-top: 40px;
-	display: flex;
-	width: 100%;
-  }
-
-  &__chat-input-box {
-	flex-grow: 1;
-  }
-  &__chat-input {
-	display: block;
-	width: 100%;
-	padding: 11px 15px;
-	font-size: 18px;
-	border: 2px solid $color-primary;
-	border-top-left-radius: 12px;
-	border-bottom-left-radius: 12px;
-	
-	&:focus {
-	  outline: none;
-	}
-  }
-
-  &__chat-send {
-	flex-shrink: 0;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
   }
 }
 
 // theme
 .theme-light {
   .modal {
-	.modal__chat-message--incoming .modal__chat-message-text {
-	  a {
-		color: $color-primary;
-	  }
-	}
-	
-	.modal__chat-message--outgoing  .modal__chat-message-text {
-	  a {
-		color: $color-text;
-	  }
-	}
   }
 }
 
 .theme-dark {
   .modal {
-	  .modal__chat-message--incoming .modal__chat-message-text {
-		a {
-		  color: $color-primary-light;
-		}
-	  }
-	  
-	  .modal__chat-message--outgoing  .modal__chat-message-text {
-		a {
-		  color: #000;
-		}
-	  }
   }
 }

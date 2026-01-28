@@ -1,0 +1,144 @@
+mixin filter()
+    .filter&attributes(attributes)
+        .filter__header
+            h2.filter__title
+                +svg("attention-circle").filter__title-icon
+                | Таблица угроз
+            .filter__nav-list
+                .filter__nav-group
+                    button.button.button--blue
+                        +svg("plus").button__icon
+                        | Добавить нарушение
+                    button.button.button--outline-hover-blue.button--icon(aria-label="Печать")
+                        +svg("printer").button__icon
+                    button.button.button--outline-hover-blue.button--icon(aria-label="Скачать")
+                        +svg("upload").button__icon
+                .filter__nav-group
+                    button.button.button--outline-hover-blue.button--icon.button--active(aria-label="Строки", data-view="view-list")
+                        +svg("category").button__icon
+                    button.button.button--outline-hover-blue.button--icon(aria-label="Плитка", data-view="view-grid")
+                        +svg("apps").button__icon
+                    button.button.button--outline-hover-blue.button--icon(aria-label="Таблица", data-view="view-table")
+                        +svg("grid").button__icon
+                    button.button.button--outline-hover-blue.filter__toggle.js-filter-toggle
+                        | Фильтры и поиск
+                        +svg("chevron-down").button__icon
+        .filter__options-box
+            .filter__options
+                .filter__row
+                    // group
+                    .form-group.form-group--search.filter__row-group.filter__row-group--search
+                        .form-group__title-box
+                            p.form-group__title Поиск
+                            button.form-group__reset-btn
+                                +svg("close").form-group__reset-icon
+                                | Сбросить
+                        .form-group__input-box
+                            .form-group__action-btn
+                                +svg("search").form-group__action-icon
+                            input.form-group__input.form-group__input--sm(type="search", placeholder="Нажмите для поиска")
+                    // group
+                    .form-group.filter__row-group
+                        .form-group__title-box
+                            p.form-group__title Приоритет:
+                            button.form-group__reset-btn
+                                +svg("close").form-group__reset-icon
+                                | Сбросить
+                        .form-group__radio-row
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="priority", checked)
+                                span.form-group__radio-text Критический
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="priority")
+                                span.form-group__radio-text Высокий
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="priority")
+                                span.form-group__radio-text Средний
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="priority")
+                                span.form-group__radio-text Низкий
+                    // group
+                    .form-group.filter__row-group
+                        .form-group__title-box
+                            p.form-group__title Риск:
+                            button.form-group__reset-btn
+                                +svg("close").form-group__reset-icon
+                                | Сбросить
+                        .form-group__radio-row
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="risk", checked)
+                                span.form-group__radio-text Критический
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="risk")
+                                span.form-group__radio-text Высокий
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="risk")
+                                span.form-group__radio-text Средний
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="risk")
+                                span.form-group__radio-text Низкий
+                    // group
+                    .form-group.filter__row-group
+                        .form-group__title-box
+                            p.form-group__title Статус:
+                            button.form-group__reset-btn
+                                +svg("close").form-group__reset-icon
+                                | Сбросить
+                        .form-group__radio-row
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="status", checked)
+                                span.form-group__radio-text На согласовании
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="status")
+                                span.form-group__radio-text На реагировании
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="status")
+                                span.form-group__radio-text Завершенные
+                    // group
+                    .form-group.filter__row-group
+                        .form-group__title-box
+                            p.form-group__title Дата обнаружения:
+                            button.form-group__reset-btn
+                                +svg("close").form-group__reset-icon
+                                | Сбросить
+                        .form-group__radio-row
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="date", checked)
+                                span.form-group__radio-text За 24 часа
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="date")
+                                span.form-group__radio-text За неделю
+                            // group
+                            input.form-group__input.form-group__input--sm.form-group__input--transparent(type="date")
+                .filter__row
+                    // group
+                    .form-group.filter__row-group.filter__row-group--search
+                        .form-group__title-box
+                            p.form-group__title Тэги:
+                            button.form-group__reset-btn
+                                +svg("close").form-group__reset-icon
+                                | Сбросить
+                        .form-group__input-box
+                            select.form-group__input.form-group__input--sm.form-group__input--transparent
+                                option Тег 1
+                                option Тег 2
+                                option Тег 3
+                                option Тег 4
+                        .label-group.form-group__label-group
+                            .label.label--blue
+                                span.label__text #Банкинг
+                                button.label__close(aria-label="Закрыть")
+                                    +svg("close").label__close-icon
+                            .label.label--blue
+                                span.label__text  #Высокий
+                                button.label__close(aria-label="Закрыть")
+                                    +svg("close").label__close-icon
+                            .label.label--blue
+                                span.label__text #Завершенные
+                                button.label__close(aria-label="Закрыть")
+                                    +svg("close").label__close-icon
+                            button.label.label--blue
+                                span.label__text Все...
+            .filter__btn-box
+                button.button.button--outline-red Сбросить
+                button.button.button--outline-blue Показать 234 записи

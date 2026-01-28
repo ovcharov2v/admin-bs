@@ -3,30 +3,50 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  color: $color-text1;
 }
 
 input, button, textarea {
   font-family: inherit;
 }
 
-.h1 {
-  font-size: 36px;
-  line-height: 1;
-  font-weight: 600;
-
-  @include desktop {
-    font-size: 56px;
-  }
+.color-red {
+  color: #E74B4D;
 }
 
-.h2 {
-  font-size: 28px;
-  line-height: 34px;
-  font-weight: 600;
+.color-green {
+  color: #3BC363;
+}
 
-  @include desktop {
-    font-size: 36px;
-    line-height: 40px;
+.color-orange {
+  color: #F89445;
+}
+
+.text-with-dot {
+  position: relative;
+  padding-left: 12px;
+  
+  &::before {
+	flex-shrink: 0;
+	display: block;
+	position: absolute;
+	top: 50%;
+	top: .5lh;
+	left: 0;
+	transform: translateY(-50%);
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	margin-right: 5px;
+	background-color: currentColor;
+	content: "";
+  }
+  
+  &--red {
+	&::before {
+	  background-color: #E74B4D;
+	}
   }
 }
 

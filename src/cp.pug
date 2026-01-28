@@ -1,0 +1,342 @@
+extends pug/cp
+
+block content
+    .page
+        .container.page__container
+            .page__header
+                h1.page__title
+                    +svg("shield-warning").page__title-icon
+                    | Панель управления
+                p.page__description Централизованный просмотр всех угроз
+            // grid
+            .page__info-card-grid
+                // card
+                .info-card.info-card--red
+                    .info-card__top
+                        .info-card__title-box
+                            h3.info-card__title Нарушения
+                            p.info-card__description по всем разделам
+                        .info-card__icon-box
+                            +svg("attention-triangle").info-card__icon
+                    p.info-card__value 12 877
+                    .info-card__bottom
+                        p.info-card__text
+                            span.info-card__text-value 847
+                            |
+                            | за июнь,
+                        |
+                        p.info-card__text
+                            span.info-card__text-value.info-card__text-value--green
+                                +svg("triangle-down").info-card__text-icon
+                                | 9%
+                            |
+                            | чем в мае
+                // card
+                .info-card.info-card--violet
+                    .info-card__top
+                        .info-card__title-box
+                            h3.info-card__title Активные инциденты
+                            p.info-card__description отправлено уведомлений
+                        .info-card__icon-box
+                            +svg("mail-open").info-card__icon
+                    p.info-card__value 877
+                    .info-card__bottom
+                        p.info-card__text
+                            span.info-card__text-value 124
+                            |
+                            | за июнь,
+                        |
+                        p.info-card__text
+                            span.info-card__text-value.info-card__text-value--red
+                                +svg("triangle-down").info-card__text-icon
+                                | 15%
+                            |
+                            | чем в мае
+                // card
+                .info-card.info-card--blue
+                    .info-card__top
+                        .info-card__title-box
+                            h3.info-card__title Закрытые кейсы
+                            p.info-card__description удалено
+                        .info-card__icon-box
+                            +svg("flag").info-card__icon
+                    p.info-card__value 10 877
+                    .info-card__bottom
+                        p.info-card__text
+                            span.info-card__text-value 45
+                            |
+                            | за июнь,
+                        |
+                        p.info-card__text
+                            span.info-card__text-value.info-card__text-value--red
+                                +svg("triangle-down").info-card__text-icon
+                                | 3%
+                            |
+                            | чем в мае
+                // card
+                .info-card.info-card--navy
+                    .info-card__top
+                        .info-card__title-box
+                            h3.info-card__title Закрытые кейсы
+                            p.info-card__description удалено
+                        .info-card__icon-box
+                            +svg("shield-warning").info-card__icon
+                    p.info-card__value 12%
+                    .info-card__bottom
+                        p.info-card__text
+                            span.info-card__text-value 22
+                            |
+                            | за июнь,
+                        |
+                        p.info-card__text
+                            span.info-card__text-value.info-card__text-value--red
+                                +svg("triangle-down").info-card__text-icon
+                                | 3%
+                            |
+                            | чем в мае
+
+            // grid
+            .page__data-card-grid
+                // card
+                .data-card
+                    .data-card__top
+                        p.data-card__title График нарушений
+                        .data-card__nav
+                            input.form-group__input.form-group__input--transparent(type="date")
+                            button.button.button--outline-hover-blue.button--icon.button--sm.data-card__btn
+                                +svg("arrow-move-hor").button__icon
+                    .data-card__content-box
+                        img(src="./images/chart1.png", alt="")
+                // card
+                .data-card
+                    .data-card__top
+                        p.data-card__title Типы сайтов нарушителей
+                        .data-card__nav
+                            button.button.button--outline-hover-blue.button--icon.button--sm
+                                +svg("arrow-move-hor").button__icon
+                    .data-card__content-box
+                        img(src="./images/chart2.png", alt="")
+                // card
+                .data-card
+                    .data-card__top
+                        p.data-card__title
+                            +svg("star-filled").data-card__title-icon
+                            | Избранные критические алерты
+                        .data-card__nav
+                            button.button.button--outline-hover-blue.button--icon.button--sm
+                                +svg("arrow-move-hor").button__icon
+                    .data-card__content-box
+                        .data-card__list
+                            .data-card__row
+                                p.data-card__type.text-with-dot.color-red Вредоносный домен:
+                                a.data-card__link(href="#", target="_blank") fjfds.com
+                                .data-card__action-box
+                                    p.data-card__status.color-green Согласован
+                                    button.button.button--xs.button--outline-hover-blue.button--icon.data-card__action-btn
+                                        +svg("star-filled").button__icon.color-orange
+                            .data-card__row
+                                p.data-card__type.text-with-dot.color-red Вредоносный домен:
+                                a.data-card__link(href="#", target="_blank") secure-bank-login.net
+                                .data-card__action-box
+                                    p.data-card__status.color-orange
+                                        | Отправлено
+                                        br
+                                        | уведомление
+                                    button.button.button--xs.button--outline-hover-blue.button--icon.data-card__action-btn
+                                        +svg("star-filled").button__icon.color-orange
+                            .data-card__row
+                                p.data-card__type.text-with-dot.color-red Вредоносный домен:
+                                a.data-card__link(href="#", target="_blank") secure-bank-secure-bank-secure-bank-login.net
+                                .data-card__action-box
+                                    p.data-card__status.color-red Заблокирован
+                                    button.button.button--xs.button--outline-hover-blue.button--icon.data-card__action-btn
+                                        +svg("star-filled").button__icon.color-orange
+                            .data-card__row
+                                p.data-card__type.text-with-dot.color-red Вредоносный домен:
+                                a.data-card__link(href="#", target="_blank") secure-bank-login.net
+                                .data-card__action-box
+                                    p.data-card__status.color-green Согласован
+                                    button.button.button--xs.button--outline-hover-blue.button--icon.data-card__action-btn
+                                        +svg("star-filled").button__icon.color-orange
+                // card
+                .data-card
+                    .data-card__top
+                        p.data-card__title
+                            |Критические алерты
+                        .data-card__nav
+                            button.button.button--outline-hover-blue.button--icon.button--sm
+                                +svg("arrow-move-hor").button__icon
+                    .data-card__content-box
+                        .data-card__list
+                            .data-card__row
+                                p.data-card__type.text-with-dot.color-red Вредоносный домен:
+                                a.data-card__link(href="#", target="_blank") fjfds.com
+                                .data-card__action-box
+                                    p.data-card__time
+                                        +svg("clock").data-card__time-icon
+                                        | 2 мин. назад
+                                    button.button.button--outline-hover-red.button--xs.button--icon.data-card__action-btn
+                                        +svg("check").button__icon
+                                    button.button.button--outline-hover-green.button--xs.button--icon.data-card__action-btn
+                                        +svg("close").button__icon
+                            .data-card__row
+                                p.data-card__type.text-with-dot.color-red Вредоносный домен:
+                                a.data-card__link(href="#", target="_blank") secure-bank-login.net
+                                .data-card__action-box
+                                    .data-card__status-box
+                                        p.data-card__status.color-green
+                                            +svg("check").data-card__status-icon
+                                            |Согласован
+                                        p.data-card__time
+                                            +svg("clock").data-card__time-icon
+                                            | 2 мин. назад
+                            .data-card__row
+                                p.data-card__type.text-with-dot.color-red Вредоносный домен:
+                                a.data-card__link(href="#", target="_blank") fjfds.com
+                                .data-card__action-box
+                                    p.data-card__time
+                                        +svg("clock").data-card__time-icon
+                                        | 2 мин. назад
+                                    button.button.button--outline-hover-red.button--xs.button--icon.data-card__action-btn
+                                        +svg("check").button__icon
+                                    button.button.button--outline-hover-green.button--xs.button--icon.data-card__action-btn
+                                        +svg("close").button__icon
+                            .data-card__row
+                                p.data-card__type.text-with-dot.color-red Вредоносный домен:
+                                a.data-card__link(href="#", target="_blank") fjfds.com
+                                .data-card__action-box
+                                    p.data-card__time
+                                        +svg("clock").data-card__time-icon
+                                        | 2 мин. назад
+                                    button.button.button--outline-hover-red.button--xs.button--icon.data-card__action-btn
+                                        +svg("check").button__icon
+                                    button.button.button--outline-hover-green.button--xs.button--icon.data-card__action-btn
+                                        +svg("close").button__icon
+
+            // data table
+            .data-table.view-list
+                // filter
+                +filter().data-table__filter
+                // content
+                .data-table__content
+                    .data-table__cards-list
+                        +card1()
+                        +card2()
+                        +card3()
+                        +card4()
+                        +card5()
+                    // table
+                    table.table.data-table__table
+                        thead.table__head
+                            // tr
+                            tr.table__row
+                                th.table__cell
+                                    label.checkbox.table__checkbox
+                                        input.checkbox__input(type="checkbox")
+                                        span.checkbox__text
+                                th.table__cell
+                                    .table__cell-wrap Угроза
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Домен
+                                th.table__cell
+                                    .table__cell-wrap Тип домена
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Создан
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Регистратор
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Статус
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Действия
+                        tbody.table__body
+                            -let i = 0;
+                            while i < 4
+                                // tr
+                                tr.table__row
+                                    td.table__cell
+                                        label.checkbox.table__checkboxlabel.checkbox.table__checkbox
+                                            input.checkbox__input(type="checkbox")
+                                            span.checkbox__text
+                                    td.table__cell
+                                        .label.label--red
+                                            +svg("wave-high").label__icon
+                                            span.label__text Критическая
+                                    td.table__cell
+                                        a.table__link(href="#", target="_blank") waterproofloiteringmarshysdfgdgdgfdgdfg.com
+                                    td.table__cell 2 уровня
+                                    td.table__cell 14.04.2025
+                                    td.table__cell Рег.ру
+                                    td.table__cell
+                                        span.color-red Заблокирован 12.03.25
+                                    td.table__cell
+                                        .table__actions
+                                            button.button.button--outline-hover-blue2
+                                                +svg("file-document").button__icon
+                                                | Подробнее
+                                // tr
+                                tr.table__row
+                                    td.table__cell
+                                        label.checkbox.table__checkboxlabel.checkbox.table__checkbox
+                                            input.checkbox__input(type="checkbox")
+                                            span.checkbox__text
+                                    td.table__cell
+                                        .label.label--blue
+                                            +svg("wave-low").label__icon
+                                            span.label__text Низкая
+                                    td.table__cell
+                                        a.table__link(href="#", target="_blank") waterproofloiteringmarshysdfgdgdgfdgdfg.com
+                                    td.table__cell 2 уровня
+                                    td.table__cell 14.04.2025
+                                    td.table__cell Рег.ру
+                                    td.table__cell
+                                        span.color-orange Отправлено уведомление 12.03.25
+                                    td.table__cell
+                                        .table__actions
+                                            button.button.button--outline-hover-blue2
+                                                +svg("file-document").button__icon
+                                                | Подробнее
+                                // tr
+                                tr.table__row
+                                    td.table__cell
+                                        label.checkbox.table__checkboxlabel.checkbox.table__checkbox
+                                            input.checkbox__input(type="checkbox")
+                                            span.checkbox__text
+                                    td.table__cell
+                                        .label.label--violet
+                                            +svg("wave-medium").label__icon
+                                            span.label__text Высокая
+                                    td.table__cell
+                                        a.table__link(href="#", target="_blank") waterprooflo.com
+                                    td.table__cell 2 уровня
+                                    td.table__cell 14.04.2025
+                                    td.table__cell Рег.ру
+                                    td.table__cell
+                                        span.text-with-dot Требует действий
+                                    td.table__cell
+                                        .table__actions
+                                            button.button.button--outline-hover-green.button--icon(data-tippy-content="Принять")
+                                                +svg("check").button__icon
+                                            button.button.button--outline-hover-red.button--icon(data-tippy-content="Отклонить")
+                                                +svg("close").button__icon
+                                            button.button.button--outline-hover-blue2.button--icon(data-tippy-content="Скриншот")
+                                                +svg("image").button__icon
+                                            button.button.button--outline-hover-blue2.button--icon(data-tippy-content="Подробнее о нарушении")
+                                                +svg("file-document").button__icon
+                                - i++
+                    .data-table__pagination
+                        +pagination()
+
+
+
+
+

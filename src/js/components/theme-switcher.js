@@ -8,13 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-  const btnList = document.querySelectorAll('.js-set-theme');
-  if(btnList.length > 0) {
-    btnList.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const theme = btn.getAttribute('data-theme');
-        removeAllThemes()
-        document.documentElement.classList.add(`theme-${theme}`);
+  const switcherList = document.querySelectorAll('.theme-switcher');
+  if(switcherList.length > 0) {
+    switcherList.forEach(switcher => {
+      switcher.addEventListener('click', () => {
+        if(document.documentElement.classList.contains('theme-light')) {
+          removeAllThemes();
+          document.documentElement.classList.add('theme-dark');
+        }
+        else {
+          removeAllThemes();
+          document.documentElement.classList.add('theme-light');
+        }
       });
     });
   }

@@ -1,3 +1,60 @@
 mixin sidebar()
 	// Sidebar
 	aside.sidebar
+		.sidebar__logo-box
+			.sidebar__logo
+				+svg("logo").sidebar__logo-img
+				.sidebar__logo-text
+					p.sidebar__logo-name BrandSecurity
+					p.sidebar__logo-description drp platform
+		nav.sidebar__nav
+			ul.sidebar__nav-list
+				li.sidebar__nav-elem
+					a.sidebar__nav-link.sidebar__nav-link--active(href="#")
+						+svg("chart-line").sidebar__nav-icon
+						| Панель управления
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("shield-warning").sidebar__nav-icon
+						| Фишинг
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("eye").sidebar__nav-icon
+						| Использование ТЗ
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("mobile-button").sidebar__nav-icon
+						| Моб. приложения
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("water-drop").sidebar__nav-icon
+						| Утечки
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("share").sidebar__nav-icon
+						| Фейковые аккаунты
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("paper-plane").sidebar__nav-icon
+						| Мессенджеры
+				li.sidebar__nav-separator
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("shield-check").sidebar__nav-icon
+						| Белый список
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("file-document").sidebar__nav-icon
+						| Отчеты
+				li.sidebar__nav-separator
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("settings").sidebar__nav-icon
+						| Настройки
+				li.sidebar__nav-elem
+					a.sidebar__nav-link(href="#")
+						+svg("circle-help").sidebar__nav-icon
+						| Помощь и поддержка
+		.sidebar__status-box
+			p.sidebar__status.sidebar__status--green Все системы работают
+

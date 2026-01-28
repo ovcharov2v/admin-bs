@@ -1,0 +1,30 @@
+include mixins
+
+block vars
+	- var baseDir = './'
+	- var baseTheme = 'theme-light'
+
+doctype html(lang="ru")
+html(class=""+baseTheme)
+	head
+		block head-start
+		block meta
+			meta(charset='utf-8')
+			meta(http-equiv='X-UA-Compatible' content='IE=edge')
+			meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+			meta(name='description' content='Admin BS')
+			title Admin BS
+			link(rel='icon' type='image/png' href='favicon-32x32.png' sizes='32x32')
+			link(rel='icon' type='image/png' href='favicon-16x16.png' sizes='16x16')
+		block styles
+			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+		block head-end
+	body
+		block body-start
+		main.main
+			block content
+		block scripts
+			//-script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
+			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
+		include ../images/sprite/sprite.svg
+		block body-end

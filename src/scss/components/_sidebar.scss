@@ -1,0 +1,169 @@
+.sidebar {
+  position: fixed;
+  z-index: 777;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 254px;
+  height: 100%;
+  background-color: $color-bg2;
+  border-right: 1px solid $color-border;
+  
+  &__logo-box {
+	padding: 24px 20px;
+	border-bottom: 1px solid $color-border;
+  }
+  
+  &__logo {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+  }
+  
+  &__logo-img {
+	display: block;
+	width: 36px;
+	height: 36px;
+  }
+  
+  &__logo-text {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+  }
+  
+  &__logo-name {
+	font-size: 18px;
+	line-height: 1;
+	font-weight: 700;
+  }
+  
+  &__logo-description {
+	font-size: 12px;
+	line-height: 1.2;
+	color: $color-text2;
+	text-transform: uppercase;
+  }
+  
+  &__nav {
+	flex-grow: 1;
+	padding: 16px;
+	overflow-y: auto;
+  }
+  
+  &__nav-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+  }
+  
+  &__nav-elem {
+  }
+  
+  &__nav-link {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 14px 25px 14px 16px;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 500;
+	color: $color-text2;
+	transition: color $transition-default, background-color $transition-default, border-color $transition-default;
+	
+	&::after {
+	  position: absolute;
+	  top: 50%;
+	  right: 16px;
+	  transform: translateY(-50%);
+	  width: 8px;
+	  height: 8px;
+	  border-radius: 50%;
+	  background-color: currentColor;
+	  content: "";
+	  opacity: 0;
+	  transition: opacity $transition-default;
+	}
+	
+	&:hover {
+	  color: $color-text1;
+	}
+	
+	&--active {
+	  background-color: #E2E8FF;
+	  border-color: #B7C6FA;
+	  color: #4259E9 !important;
+	  
+	  &::after {
+		opacity: 1;
+	  }
+	}
+  }
+  
+  &__nav-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+  }
+  
+  &__nav-separator {
+	border-bottom: 1px solid $color-border;
+  }
+  
+  &__status-box {
+	padding: 16px 32px;
+	border-top: 1px solid $color-border;
+  }
+  
+  &__status {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 12px;
+	line-height: 1.2;
+	color: $color-text2;
+	
+	&::before {
+	  flex-shrink: 0;
+	  display: block;
+	  width: 8px;
+	  height: 8px;
+	  border-radius: 50%;
+	  content: "";
+	}
+	
+	&--green {
+	  &::before {
+		background-color: #3BC363;
+	  }
+	}
+ 
+	&--red {
+	  &::before {
+		background-color: #E74B4D;
+	  }
+	}
+  }
+}
+
+// theme
+.theme-light {
+  .sidebar {
+	&__logo-img {
+	  color: #4259E9;
+	}
+  }
+}
+
+.theme-dark {
+  .sidebar {
+	&__logo-img {
+	  color: #E74B4D;
+	}
+  }
+}

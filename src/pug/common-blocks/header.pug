@@ -1,3 +1,30 @@
 mixin header()
 	// Header
 	header.header
+		.container.header__container
+			.header__left-box
+				p.header__title Панель анализа угроз
+				.form-group.form-group--search.header__search
+					.form-group__input-box
+						.form-group__action-btn
+							+svg("search").form-group__action-icon
+						input.form-group__input(type="search", placeholder="Поиск угроз...")
+			.header__right-box
+				.header__nav-box
+					button.theme-switcher
+						.theme-switcher__theme.theme-switcher__theme--light
+							+svg('sun').theme-switcher__icon
+							| Светлая
+						.theme-switcher__theme.theme-switcher__theme--dark
+							+svg('moon').theme-switcher__icon
+							| Тёмная
+					button.button.button--outline-hover-blue.button--icon.button--round(aria-label="Обновить")
+						+svg("reload").button__icon
+				.header__profile
+					.header__profile-data
+						p.header__profile-name Роман Андерсон
+						p.header__profile-job Аналитик безопасности
+					.header__profile-icon-box
+						+svg("user").header__profile-icon
+					button.header__profile-btn(aria-label="Профиль")
+						+svg("chevron-down").header__profile-btn-icon

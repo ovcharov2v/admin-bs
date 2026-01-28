@@ -1,0 +1,206 @@
+extends pug/base
+
+append styles 
+    style.
+        body {
+            padding: 24px;
+        }
+
+        main {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 24px;
+            background-color: var(--color-bg2);
+            border-radius: 20px;
+        }
+
+        h2 {
+            margin-top: 32px;
+            margin-bottom: 18px;
+            font-size: 24px;
+            line-height: 1;
+            font-weight: 500;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template: auto / repeat(20, 24px);
+            grid-gap: 10px;
+        }
+
+        .icon-grid svg {
+            display: block;
+            width: 24px;
+            height: 24px;
+        }
+
+        .input-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 400px;
+        }
+
+        .button-list {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+block content
+    .container
+        h2 Тема
+        button.theme-switcher
+            .theme-switcher__theme.theme-switcher__theme--light
+                +svg('sun').theme-switcher__icon
+                |Светлая
+            .theme-switcher__theme.theme-switcher__theme--dark
+                +svg('moon').theme-switcher__icon
+                | Тёмная
+
+        h2 Иконки
+        .icon-grid
+            include images/sprite/icons.html
+        h2 Кнопки
+        .button-list
+            button.button.button--outline-hover-blue.button--icon.button--round(data-tippy-content="Подсказка")
+                +svg("reload").button__icon
+            button.button.button--outline-hover-blue.button--icon(data-tippy-content="Подсказка")
+                +svg("filter").button__icon
+            button.button.button--outline-hover-blue.button--icon.button--sm(data-tippy-content="Подсказка")
+                +svg("filter").button__icon
+            button.button.button--outline-hover-blue.button--icon.button--xs(data-tippy-content="Подсказка")
+                +svg("filter").button__icon
+            button.button.button--outline-hover-blue
+                +svg("printer").button__icon
+                | Печать
+            button.button.button--blue
+                +svg("printer").button__icon
+                | Печать
+            button.button.button--outline-hover-red
+                +svg("check").button__icon
+                | Принять
+            button.button.button--outline-hover-green
+                +svg("close").button__icon
+                | Отклонить
+
+        h2 Инпуты
+        .input-list
+            // group
+            .form-group.form-group--action
+                .form-group__title-box
+                    p.form-group__title Текст
+                .form-group__input-box
+                    button.form-group__action-btn(aria-label="Очистить")
+                        +svg("close").form-group__action-icon
+                    input.form-group__input(type="text", placeholder="Текст")
+                span.form-group__note текст
+            // group
+            .form-group.form-group--action.form-group--complete
+                .form-group__title-box
+                    p.form-group__title Текст
+                .form-group__input-box
+                    button.form-group__action-btn(aria-label="Очистить")
+                        +svg("check").form-group__action-icon
+                    input.form-group__input(type="text", placeholder="Текст")
+                span.form-group__note текст
+            // group
+            .form-group.form-group--action.form-group--error
+                .form-group__title-box
+                    p.form-group__title Текст
+                .form-group__input-box
+                    button.form-group__action-btn(aria-label="Очистить")
+                        +svg("close").form-group__action-icon
+                    input.form-group__input(type="text", placeholder="Текст")
+                span.form-group__note текст
+            // group
+            .form-group.form-group--search
+                .form-group__input-box
+                    .form-group__action-btn
+                        +svg("search").form-group__action-icon
+                    input.form-group__input(type="search", placeholder="Текст")
+            // group
+            .form-group.form-group--search
+                .form-group__title-box
+                    p.form-group__title Поиск
+                    button.form-group__reset-btn
+                        +svg("close").form-group__reset-icon
+                        | Сбросить
+                .form-group__input-box
+                    .form-group__action-btn
+                        +svg("search").form-group__action-icon
+                    input.form-group__input.form-group__input--sm(type="search", placeholder="Нажмите для поиска")
+            label.checkbox
+                input.checkbox__input(type="checkbox")
+                span.checkbox__text Текст
+            label.checkbox.checkbox--solid
+                input.checkbox__input(type="checkbox")
+                span.checkbox__text Текст
+
+        h2 Лейблы
+        .label-list
+            .label.label--blue
+                +svg("wave-low").label__icon
+                span.label__text Низкая
+            .label.label--violet
+                +svg("wave-medium").label__icon
+                span.label__text Высокая
+            .label.label--red
+                +svg("wave-high").label__icon
+                span.label__text Критическая
+            .label
+                span.label__text #Фишинг
+            .label.label--navy
+                span.label__text #Фишинг
+            .label
+                span.label__text #Банкинг
+                button.label__close(aria-label="Закрыть")
+                    +svg("close").label__close-icon
+            // group
+            .label-group
+                .label.label--blue
+                    +svg("wave-low").label__icon
+                    span.label__text Низкая
+                .label.label--violet
+                    +svg("wave-medium").label__icon
+                    span.label__text Высокая
+                .label.label--red
+                    +svg("wave-high").label__icon
+                    span.label__text Критическая
+                .label
+                    span.label__text #Фишинг
+                .label.label--dark-violet
+                    span.label__text #Фишинг
+            // group
+            .label-group
+                .label.label--red
+                    span.label__text #Банкинг
+                    button.label__close(aria-label="Закрыть")
+                        +svg("close").label__close-icon
+                .label
+                    span.label__text  #Банкинг
+                    button.label__close(aria-label="Закрыть")
+                        +svg("close").label__close-icon
+                .label
+                    span.label__text #Банкинг
+                    button.label__close(aria-label="Закрыть")
+                        +svg("close").label__close-icon
+
+        h2 Текст
+        div
+            p Текст цвет
+            p(style="color: var(--color-text2)") Текст цвет
+            p.color-green Текст цвет
+            p.color-red Текст цвет
+            p.color-orange Текст цвет
+            p.text-with-dot Текст с точкой
+            p.text-with-dot.text-with-dot--red Текст с точкой
+
+        h2 Модальные окна
+        .button-list
+            button.button.button--outline-hover-blue(data-modal="success") Успех
+            button.button.button--outline-hover-blue(data-modal="attention") Внимание
+            button.button.button--outline-hover-blue(data-modal="error") Ошибка
+            button.button.button--outline-hover-blue(data-modal="smile") Новость
+            button.button.button--outline-hover-blue(data-modal="ghost") Ошибка

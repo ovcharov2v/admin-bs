@@ -1,0 +1,50 @@
+.page {
+  padding-top: 90px;
+  padding-bottom: 50px;
+  padding-left: 253px;
+  background-color: $color-bg1;
+  
+  &__container {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+  }
+  
+  &__header {
+  }
+  
+  &__title {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	margin-bottom: 9px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
+  }
+  
+  &__title-icon {
+	flex-shrink: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+  }
+  
+  &__description {
+	font-size: 14px;
+	line-height: 1;
+	color: $color-text2;
+  }
+  
+  &__info-card-grid {
+	display: grid;
+	grid-template: auto / repeat(4,minmax(0,1fr));
+	grid-gap: 24px;
+  }
+  
+  &__data-card-grid {
+	display: grid;
+	grid-template: auto / repeat(2,minmax(0,1fr));
+	grid-gap: 24px;
+  }
+}

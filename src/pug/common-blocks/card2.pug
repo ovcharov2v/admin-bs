@@ -1,0 +1,41 @@
+mixin card2()
+    .card.card--orange&attributes(attributes)
+        .card__main-box
+            .card__main-wrap
+                .card__main-top
+                    .card__main-checkbox-wrap
+                        p.card__main-status Отправлено уведомление - 12.03.2025
+                        label.checkbox.card__main-checkbox
+                            input.checkbox__input(type="checkbox")
+                            span.checkbox__text
+                    .label-group.card__main-label-group
+                        .label.label--violet
+                            +svg("wave-medium").label__icon
+                            span.label__text Средняя
+                        .label
+                            span.label__text #Логин/Пароль
+                        .label
+                            span.label__text #Логин/Пароль
+                .card__main-link
+                    p.card__main-link-text Ссылка на нарушение:
+                    a.card__main-link-value(href="#", target="_blank") secure-bank-loginloginlogin.net
+            .card__text-box
+                ul.card__text
+                    li.card__text-row
+                        span.card__text-title Тип домена:
+                        span.card__text-value 2 уровня
+                    li.card__text-row
+                        span.card__text-title Регистратор:
+                        span.card__text-value Рег.ру
+                    li.card__text-row
+                        span.card__text-title Исходный домен:
+                        span.card__text-value secure-bank-login.net
+        .card__action-box
+            p.card__action-status Отправлено уведомление - 12.03.2025
+            .card__action-btn-row
+                button.button.button--outline-hover-blue2.card__action-btn
+                    +svg("file-document").button__icon
+                    | Подробнее о нарушении
+            a.card__action-screenshot-link(href="#", target="_blank")
+                +svg("image").card__action-screenshot-icon
+                | Посмотреть скриншот

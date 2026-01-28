@@ -1,42 +1,32 @@
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	min-height: 100vh;
-	//padding-top: 84px;
-	overflow-x: hidden;
-	color: var(--color-text);
-	-webkit-font-smoothing: antialiased;
-	background-color: var(--color-bg);
-
-	/*@include desktop {
-		padding-top: 148px;
-	}*/
-
-	&.menu-open, &.lk-menu-open, &.lk-nav-open {
-		overflow: hidden;
-	}
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: $color-bg1;
+  min-width: 1440px;
 }
 
 .main {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
-	cursor: pointer;
+  color: inherit;
+  cursor: pointer;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 

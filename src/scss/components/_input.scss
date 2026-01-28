@@ -1,41 +1,60 @@
-.input {
+.input1 {
+  position: relative;
   display: block;
   width: 100%;
-  min-width: unset;
-  padding: 15px 16px;
-  border: 1px solid;
-  border-radius: 12px;
-  background-color: transparent;
-  font-size: 16px;
-  line-height: 24px;
-  color: $color-text;
-  transition: border-color $transition-default;
-  resize: none;
-
-  &::placeholder {
-    color: #9DA2A8;
+  
+  &__el {
+	display: block;
+	width: 100%;
+	min-width: unset;
+	padding: 8px 16px;
+	border: 1px solid #E2E2F0;
+	border-radius: 8px;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 500;
+	color: $color-text1;
+	transition: border-color $transition-default;
+	resize: none;
+	
+	&::placeholder {
+	  color: $color-text2;
+	}
+	
+	&:hover {
+	  border-color: $color-border !important;
+	}
+	
+	&:focus {
+	  border-color: $color-text2 !important;
+	  outline: none;
+	}
+	
+	.input--search & {
+	  padding-left: 34px;
+	  background-color: #F4F5FC;
+	}
+ 
+	.input--sm & {
+	  padding-top: 7px;
+	  padding-bottom: 7px;
+	  font-size: 12px;
+	  line-height: 1;
+	  border-radius: 4px;
+	}
   }
-
-  &:hover {
-    border-color: $color-primary-light !important;
-  }
-
-  &:focus {
-    border-color: $color-primary !important;
-    outline: none;
-  }
-}
-
-
-// theme
-.theme-light {
-  .input {
-    border-color: #EDEEF1;
-  }
-}
-
-.theme-dark {
-  .input {
-    border-color: #9DA2A8;
+  
+  &__icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+	width: 14px;
+	height: 14px;
+	color: $color-text2;
+	
+	.input--search & {
+	  left: 16px;
+	}
   }
 }

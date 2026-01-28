@@ -1,0 +1,47 @@
+mixin card5()
+    .card&attributes(attributes)
+        .card__main-box
+            .card__main-wrap
+                .card__main-top
+                    .card__main-checkbox-wrap
+                        p.card__main-status Требует действий- просмотрено
+                        label.checkbox.card__main-checkbox
+                            input.checkbox__input(type="checkbox")
+                            span.checkbox__text
+                    .label-group.card__main-label-group
+                        .label.label--blue
+                            +svg("wave-low").label__icon
+                            span.label__text Низкая
+                        .label
+                            span.label__text #Логин/Пароль
+                        .label
+                            span.label__text #Логин/Пароль
+                .card__main-link
+                    p.card__main-link-text Ссылка на нарушение:
+                    a.card__main-link-value(href="#", target="_blank") secure-bank-loginloginlogin.net
+            .card__text-box
+                ul.card__text
+                    li.card__text-row
+                        span.card__text-title Дата:
+                        span.card__text-value 4.04.2025
+                    li.card__text-row
+                        span.card__text-title Текст:
+                        span.card__text-value текст
+                .card__text-fragment
+                    p.card__text-fragment-title Фрагмент нарушения:
+                    p.card__text-fragment-text Has anyone seen the new DRP platform from SecureWatch? Looks interesting for enterprise
+
+        .card__action-box
+            p.card__action-status Требует действий- просмотрено
+            .card__action-btn-row
+                button.button.button--outline-hover-green.card__action-btn
+                    +svg("check").button__icon
+                    | Согласовать
+                button.button.button--outline-hover-red.card__action-btn
+                    +svg("close").button__icon
+                    | Отклонить
+                button.button.button--icon.button--outline-hover-blue2(data-tippy-content="Подробнее о нарушении")
+                    +svg("file-document").button__icon
+            a.card__action-screenshot-link(href="#", target="_blank")
+                +svg("image").card__action-screenshot-icon
+                | Посмотреть скриншот

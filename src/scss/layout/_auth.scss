@@ -1,0 +1,163 @@
+.auth {
+  height: 100%;
+  background-color: #fff;
+  
+  &__grid {
+	display: grid;
+	grid-template: auto / repeat(2, minmax(0, 1fr));
+	width: 100%;
+	max-width: 1440px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 24px;
+  }
+  
+  &__bg-col {
+	display: flex;
+	flex-direction: column;
+	padding: 27px 36px 13px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 20px;
+	color: #fff;
+  }
+  
+  &__bg-logo {
+	display: block;
+	width: 39px;
+	height: 39px;
+  }
+  
+  &__bg-bottom {
+	margin-top: auto;
+  }
+  
+  &__bg-labels {
+	margin-bottom: 7px;
+  }
+  
+  &__bg-title {
+	margin-bottom: 32px;
+	font-size: 40px;
+	line-height: 1.3;
+	font-weight: 700;
+	letter-spacing: -.02em;
+  }
+  
+  &__bg-text {
+	font-size: 12px;
+	line-height: 1.2;
+	text-align: center;
+  }
+  
+  &__form-col {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  &__form-wrap {
+	width: 100%;
+	max-width: 350px;
+	margin: auto;
+  }
+  
+  &__logo {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 16px;
+  }
+  
+  &__logo-img {
+	flex-shrink: 0;
+	display: block;
+	width: 30px;
+	height: 30px;
+  }
+  
+  &__logo-text {
+  }
+  
+  &__logo-name {
+	margin-bottom: 2px;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 700;
+  }
+  
+  &__logo-description {
+	font-size: 10px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	color: $color-text2;
+  }
+  
+  &__form-title-box {
+	margin-bottom: 32px;
+  }
+  
+  &__form-title {
+	margin-bottom: 8px;
+	font-size: 20px;
+	line-height: 1.3;
+	font-weight: 600;
+  }
+  
+  &__form-description {
+	font-size: 14px;
+	line-height: 1;
+	color: $color-text2;
+  }
+  
+  &__form-box {
+  }
+  
+  &__form-group {
+	width: 100%;
+	margin-bottom: 24px;
+  }
+  
+  &__checkbox {
+	margin-bottom: 24px;
+  }
+  
+  &__form-action-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 24px;
+	padding-top: 24px;
+	border-top: 1px solid #E1E1E1;
+  }
+  
+  &__form-reset-link {
+	font-size: 14px;
+	line-height: 1;
+	color: #4259E9;
+	
+	&:hover {
+	  text-decoration: underline;
+	}
+  }
+  
+  &__form-submit-btn {
+	flex-shrink: 0;
+  }
+  
+  &__form-bottom {
+	text-align: center;
+  }
+  
+  &__form-call-link {
+	font-size: 14px;
+	line-height: 1;
+	text-decoration: underline;
+	color: #4259E9;
+	
+	&:hover {
+	  text-decoration: none;
+	}
+  }
+}

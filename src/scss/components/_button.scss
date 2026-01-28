@@ -2,145 +2,135 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 4px;
+  background-color: transparent;
   border: 1px solid;
-  padding: 13px 10px;
-  border-radius: 12px;
-  font-size: 16px;
-  line-height: 20px;
+  padding: 11px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1;
   font-weight: 500;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   transition: border-color $transition-default, background-color $transition-default, color $transition-default, box-shadow $transition-default;
   
-  @include desktop {
-	padding: 13px 24px;
-  }
-  
-  &--lg {
-	padding: 18px 24px;
-  }
-  
-  &--red {
-	border-color: transparent;
-	background-color: $color-primary;
-	color: #fff;
-	
-	&:hover {
-	  background-color: $color-primary-dark;
-	}
-  }
-  
-  &--round-corner {
-	border-radius: 40px;
-  }
-  
-  &--outline-red {
-	border: 1px solid $color-primary;
-	background-color: $color-bg;
-	color: $color-text;
-	
-	&:hover {
-	  background-color: $color-primary;
-	  color: $color-bg;
-	}
-  }
-  
-  &--outline-gray {
-	border: 1px solid #EAEAEF;
-	background-color: $color-bg;
-	color: $color-text;
-	
-	&:hover {
-	  background-color: $color-primary;
-	  border-color: $color-primary;
-	  color: $color-bg;
-	}
-  }
-  
-  &--outline-white {
-	border-color: rgba(#fff, .5);
-	color: #fff;
-	
-	&:hover {
-	  border-color: #fff;
-	  background-color: #fff;
-	  color: $color-primary;
-	}
-  }
-  
-  &--white {
-	border-color: #fff;
-	background-color: #fff;
-	color: #0C0C0C;
-	
-	&:hover {
-	  background-color: transparent;
-	  border-color: #fff;
-	  color: #fff;
-	}
-  }
-  
-  &--transparent-white {
-	border-color: transparent;
-	background-color: rgba(#fff, .25);
-	color: #0C0C0C;
-	
-	&:hover {
-	  background-color: #fff;
-	}
-  }
-  
-  &--icon-only {
-	padding: 13px;
-	aspect-ratio: 1;
-	
-	&.button--sm {
-	  padding: 5px;
-	}
-	
-	&.button--md {
-	  padding: 7px;
-	}
-  }
-  
-  &--with-icon {
-	padding-left: 10px;
-	padding-right: 10px;
-	
-	@include desktop {
-	  padding-left: 16px;
-	  padding-right: 16px;
-	}
-  }
-  
-  &--xl {
-	padding: 18px 40px;
-	font-weight: 600;
-  }
-  
-  &:disabled {
-	filter: grayscale(1);
-	cursor: not-allowed;
+  &--round {
+	border-radius: 8px;
   }
   
   &__icon {
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
+	transition: transform $transition-default;
 	
-	.button--sm & {
-	  width: 14px;
-	  height: 14px;
+	&--red {
 	}
 	
-	&--color-red {
-	  color: $color-primary;
-	  
-	  .button:hover & {
-		color: inherit;
-	  }
+	&--green {
 	}
+	
+	&--blue {
+	}
+  }
+  
+  &--outline-hover-red {
+	background-color: $color-bg2;
+	border-color: $color-border;
+	color: #E74B4D;
+	
+	&:hover,
+	&:focus,
+	&.button--active {
+	  background-color: #E74B4D;
+	  border-color: #E74B4D;
+	  color: #fff;
+	}
+  }
+  
+  &--outline-red {
+	border-color: #E74B4D;
+	color: #E74B4D;
+	
+	&:hover,
+	&:focus,
+	&.button--active {
+	  background-color: #E74B4D;
+	  color: #fff;
+	}
+  }
+  
+  &--outline-hover-green {
+	background-color: $color-bg2;
+	border-color: $color-border;
+	color: #3BC363;
+	
+	&:hover,
+	&:focus,
+	&.button--active {
+	  background-color: #3BC363;
+	  border-color: #3BC363;
+	  color: #fff;
+	}
+  }
+  
+  &--outline-hover-blue,
+  &--outline-hover-blue2 {
+	background-color: $color-bg2;
+	border-color: $color-border;
+	color: $color-text1;
+	
+	&:hover,
+	&:focus,
+	&.button--active {
+	  background-color: #4259E9;
+	  border-color: #4259E9;
+	  color: #fff;
+	}
+  }
+  
+  &--outline-hover-blue2 {
+	color: #4259E9;
+  }
+  
+  &--outline-blue {
+	border-color: #4259E9;
+	color: #4259E9;
+	
+	&:hover,
+	&:focus,
+	&.button--active {
+	  background-color: #4259E9;
+	  color: #fff;
+	}
+  }
+  
+  &--blue {
+	background-color: #4259E9;
+	border-color: #4259E9;
+	color: #fff;
+	
+	&:hover {
+	  background-color: #243A59;
+	  border-color: #243A59;
+	}
+  }
+  
+  &--icon {
+	padding: 10px;
+	aspect-ratio: 1;
+	
+	&.button--sm {
+	  padding: 7px;
+	}
+	
+	&.button--xs {
+	  padding: 3px;
+	}
+  }
+  
+  &--sm {
+	padding: 7px 11px;
   }
 }

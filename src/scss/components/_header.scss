@@ -1,0 +1,135 @@
+.header {
+  position: fixed;
+  z-index: 666;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 253px;
+  background-color: $color-bg2;
+  
+  &__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 24px;
+  }
+  
+  &__left-box {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+  }
+  
+  &__title {
+	flex-shrink: 0;
+	max-width: 400px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }
+  
+  &__search {
+	flex-shrink: 0;
+	width: 310px;
+	
+	.form-group__input {
+	  padding-top: 9px;
+	  padding-bottom: 9px;
+	  border-radius: 8px;
+	}
+  }
+  
+  &__right-box {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	
+	& > *:not(:last-child) {
+	  position: relative;
+	  top: 0;
+	  right: -16px;
+	  
+	  &::after {
+		display: block;
+		width: 1px;
+		height: 100%;
+		background-color: $color-border;
+		content: "";
+	  }
+	}
+  }
+  
+  &__nav-box {
+	display: flex;
+	gap: 8px;
+  }
+  
+  &__profile {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+  }
+  
+  &__profile-data {
+	margin-right: 4px;
+	text-align: right;
+  }
+  
+  &__profile-name {
+	margin-bottom: 4px;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
+  }
+  
+  &__profile-job {
+	font-size: 12px;
+	line-height: 1.2;
+	color: $color-text2;
+  }
+  
+  &__profile-icon-box {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: #4259E9;
+	color: #fff;
+  }
+  
+  &__profile-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+  }
+  
+  &__profile-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 38px;
+	height: 38px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	transition: color $transition-default;
+	
+	&:hover {
+	  color: #4259E9;
+	}
+  }
+  
+  &__profile-btn-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+  }
+}

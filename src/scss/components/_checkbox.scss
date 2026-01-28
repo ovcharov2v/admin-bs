@@ -1,61 +1,79 @@
 .checkbox {
   position: relative;
   display: block;
-
+  
   &__input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
   }
-
+  
   &__text {
-    display: inline-block;
-    padding-left: 24px;
-    font-size: 14px;
-    line-height: 16px;
-    user-select: none;
-    color: $color-text;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 16px;
-      height: 16px;
-      border: 1px solid #EDEEF1;
-      border-radius: 4px;
-      background-position: center;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      cursor: pointer;
-      content: "";
-      transition: border-color $transition-default, background-color $transition-default;
-    }
-
-    &:hover {
+	display: inline-block;
+	padding-left: 24px;
+	min-width: 14px;
+	min-height: 14px;
+	font-size: 14px;
+	line-height: 1;
+	user-select: none;
+	color: $color-text1;
+	
+	&::before {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 14px;
+	  height: 14px;
+	  border: 1px solid $color-text2;
+	  border-radius: 2px;
+	  background-position: center;
+	  background-size: 18px 18px;
+	  background-repeat: no-repeat;
+	  cursor: pointer;
+	  content: "";
+	  transition: border-color $transition-default, background-color $transition-default;
+	}
+	
+	&:hover {
+	  &::before {
+		border-color: $color-text1;
+	  }
+	}
+	
+	.checkbox__input:checked + & {
+	  &::before {
+		border-color: $color-text1 !important;
+	  }
+	}
+  
+    .checkbox--solid .checkbox__input:checked + & {
       &::before {
-        border-color: $color-primary;
-      }
-    }
-
-    .checkbox__input:checked + & {
-      &::before {
-        border-color: transparent !important;
-        background-color: $color-primary;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' class='bi bi-check'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'/%3E%3C/svg%3E");
+        border-color: #4259E9 !important;
+        background-color: #4259E9 !important;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 8.00033L6.82843 10.8288L12.4847 5.17188' stroke='%23FFFFFF' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") !important;
       }
     }
   }
+}
 
-  &__link {
-    color: currentColor;
-    text-decoration: underline;
-    transition: color $transition-default;
+// theme
+.theme-light {
+  .checkbox {
+	.checkbox__input:checked + .checkbox__text {
+	  &::before {
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 8.00033L6.82843 10.8288L12.4847 5.17188' stroke='%230F0F0F' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	  }
+	}
+  }
+}
 
-    &:hover {
-      text-decoration: none;
-      color: $color-primary;
-    }
+.theme-dark {
+  .checkbox {
+	.checkbox__input:checked + .checkbox__text {
+	  &::before {
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 8.00033L6.82843 10.8288L12.4847 5.17188' stroke='%23FFFFFF' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	  }
+	}
   }
 }

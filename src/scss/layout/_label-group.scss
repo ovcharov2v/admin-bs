@@ -1,0 +1,12 @@
+.label-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  &>.label {
+    &:not(:first-child) {
+      margin-left: -4px;
+      box-shadow: -3px 0 4px rgba(#5B6189, .1);
+    }
+  }
+}

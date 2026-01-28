@@ -20,7 +20,7 @@
     transition: border-color $transition-default, border-radius $transition-default;
 
     &:hover {
-      border-color: $color-primary-light !important;
+      border-color: $color-text1 !important;
     }
     
     &--placeholder {
@@ -28,7 +28,7 @@
     }
 
     .select--active & {
-      border-color: $color-primary !important;
+      border-color: $color-text1 !important;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
@@ -44,11 +44,11 @@
     transition: transform $transition-default, color $transition-default;
 
     .select:hover & {
-      color: $color-primary-light !important;
+      color: $color-text1 !important;
     }
 
     .select--active & {
-      color: $color-primary !important;
+      color: $color-text1 !important;
       transform: translateY(-50%) rotate(180deg)
     }
   }
@@ -64,8 +64,8 @@
     padding: 12px 8px;
     width: 100%;
     max-height: 300px;
-    background-color: $color-bg;
-    border: 1px solid $color-primary;
+    background-color: $color-bg1;
+    border: 1px solid $color-text1;
     border-top-width: 0;
     border-radius: 0 0 12px 12px;
     font-size: 16px;
@@ -91,8 +91,8 @@
     transition: background-color $transition-default, color $transition-default;
 
     &:hover {
-      background-color: $color-primary;
-      color: $color-bg;
+      background-color: $color-text1;
+      color: $color-text1;
     }
 
     &--selected {
