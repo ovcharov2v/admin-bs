@@ -1,0 +1,170 @@
+.modal-help {
+  &__search {
+	margin-top: 16px;
+	
+	.modal-help--slide-show & {
+	  display: none;
+	}
+  }
+  
+  &__search-el {
+	width: 100%;
+  }
+  
+  &__content-nav {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	
+	.modal-help--slide-show & {
+	  display: none;
+	}
+  }
+  
+  &__block {
+  }
+  
+  &__title {
+	margin-bottom: 16px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
+	color: $color-text2;
+  }
+  
+  &__list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 14px;
+	line-height: 1.2;
+	font-weight: 600;
+  }
+  
+  &__list-el {
+  }
+  
+  &__list-el-content {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	margin-bottom: 8px;
+	cursor: pointer;
+	transition: color $transition-default;
+	
+	&:hover {
+	  color: $color-text2;
+	}
+  }
+  
+  &__list-el-icon {
+	flex-shrink: 0;
+	display: block;
+	width: 16px;
+	height: 16px;
+	transform: rotate(-90deg);
+	transition: transform $transition-default;
+	
+	.modal-help__list-el--opened & {
+	  transform: rotate(0);
+	}
+  }
+  
+  &__sublist {
+	display: none;
+	flex-direction: column;
+	gap: 8px;
+	padding-left: 32px;
+	
+	.modal-help__list-el--opened & {
+	  display: flex;
+	}
+  }
+  
+  &__sublist-el {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	cursor: pointer;
+	transition: color $transition-default;
+	
+	&:hover {
+	  color: $color-text2;
+	}
+  }
+  
+  &__sublist-el-icon {
+	flex-shrink: 0;
+	display: block;
+	width: 16px;
+	height: 16px;
+  }
+  
+  &__content-slide {
+	display: none;
+	font-size: 14px;
+	line-height: 1.2;
+	
+	.modal-help--slide-show & {
+	  display: block;
+	}
+  }
+  
+  &__slide-title {
+	margin-bottom: 16px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
+  }
+  
+  &__slide-text {
+	margin-bottom: 16px;
+  }
+  
+  &__slide-link {
+	text-decoration: underline;
+	
+	&:hover {
+	  text-decoration: none;
+	}
+	
+	&--blue {
+	  color: #4259E9;
+	}
+  }
+  
+  &__slide-img {
+	display: block;
+	width: 100%;
+	margin-bottom: 16px;
+  }
+  
+  &__back-btn {
+	flex-shrink: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	background-color: #E2E7F0;
+	border-radius: 6px;
+	border: none;
+	transition: background-color $transition-default, color $transition-default;
+	
+	&:hover {
+	  background-color: #4259E9;
+	  color: #fff;
+	}
+ 
+	.modal-help--slide-show & {
+	  display: flex;
+	}
+  }
+  &__back-btn-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+	transform: rotate(90deg);
+  }
+}

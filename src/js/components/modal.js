@@ -63,5 +63,26 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal()
     }
   }, false)
+
+  // modal help
+  const modalHelp = document.querySelector('#modal-help')
+  const helpLinkList = document.querySelectorAll('.modal-help__list-el-content')
+  if (helpLinkList.length) {
+    helpLinkList.forEach((link) => {
+      link.addEventListener('click', () => {
+        const el = link.closest('.modal-help__list-el')
+        el.classList.toggle('modal-help__list-el--opened');
+      })
+    })
+  }
+  const helpSubLinkList = document.querySelectorAll('.modal-help__sublist-el')
+  if (helpSubLinkList.length) {
+    helpSubLinkList.forEach((link) => {
+      link.addEventListener('click', () => modalHelp.classList.add('modal-help--slide-show'))
+    })
+  }
+
+  const backBtn = document.querySelector('.modal-help__back-btn');
+  backBtn.addEventListener('click', () => modalHelp.classList.remove('modal-help--slide-show'))
 })
 

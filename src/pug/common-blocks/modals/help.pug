@@ -1,100 +1,101 @@
-// modal detail
-#modal-detail.modal.modal--detail
+// modal help
+#modal-help.modal.modal-help.modal--help
     .modal__container
         .modal__window
             .modal__header
-                .modal__title-box
-                    p.modal__title
-                        +svg("puzzle").modal__title-icon
-                        | Детали нарушения
-                    p.modal__subtitle ID: domain1
-                button.modal__close.js-close-modal(type="button", aria-label="Закрыть")
-                    +svg("close").modal__close-icon
+                .modal__header-box
+                    .modal__title-box
+                        p.modal__title
+                            button.modal-help__back-btn(aria-label="Назад")
+                                +svg("chevron-down").modal-help__back-btn-icon
+                            |Помощь и поддержка
+                    button.modal__close.js-close-modal(type="button", aria-label="Закрыть")
+                        +svg("close").modal__close-icon
+                .modal__header-box.modal-help__search
+                    .form-group.form-group--search.modal-help__search-el
+                        .form-group__input-box
+                            .form-group__action-btn
+                                +svg("search").form-group__action-icon
+                            input.form-group__input.form-group__input--sm(type="search", placeholder="Введите поисковой запрос...")
             .modal__content-box
-                .modal-detail
-                    .modal-detail__card-grid
-                        // card
-                        .modal-detail__card.modal-detail__card--red
-                            +svg("close-circle").modal-detail__card-icon
-                            .modal-detail__card-text-box
-                                p.modal-detail__card-text Статус:
-                                p.modal-detail__card-value Заблокирован  - 12.03.2025
-                        // card
-                        .modal-detail__card.modal-detail__card--violet
-                            +svg("wave-high").modal-detail__card-icon
-                            .modal-detail__card-text-box
-                                p.modal-detail__card-text Риск нарушения:
-                                p.modal-detail__card-value Высокий
-                    // panel
-                    .modal-detail__panel
-                        p.modal-detail__panel-title
-                            +svg("file-document").modal-detail__panel-title-icon
-                            | Основная информация
-                        .modal-detail__data-list
-                            .modal-detail__data-col
-                                p.modal-detail__data-text Ссылка на нарушение:
-                                a.modal-detail__data-link(href="#") Ссылка
-                            .modal-detail__data-col
-                                p.modal-detail__data-text Найдено:
-                                p.modal-detail__data-value 14.04.2025
-                            .modal-detail__data-col
-                                p.modal-detail__data-text Канал:
-                                p.modal-detail__data-value company.com
-                            .modal-detail__data-col
-                                p.modal-detail__data-text  Участники
-                                p.modal-detail__data-value 2Л
-                            .modal-detail__data-col
-                                p.modal-detail__data-text Домен создан:
-                                p.modal-detail__data-value 14.04.2025
-                        .modal-detail__data-list
-                            .modal-detail__data-col
-                                p.modal-detail__data-text Скриншот нарушения:
-                                a.modal-detail__data-link(href="#") ссылка
-                            .modal-detail__data-col
-                                p.modal-detail__data-text Скриншот сделан:
-                                p.modal-detail__data-value 14.04.2025
-                        .modal-detail__data-cite
-                            p.modal-detail__data-cite-title Текст нарушения:
-                            p.modal-detail__data-cite-text Has anyone seen the new DRP platform from SecureWatch?
-                                br
-                                | Looks interesting for enterprise securityHas anyone seen the new DRP platform from SecureWatch? Looks interesting for enterprise security
-                    // panel
-                    .modal-detail__panel
-                        p.modal-detail__panel-title
-                            +svg("clock").modal-detail__panel-title-icon
-                            | Хронология действий
-                        .modal-detail__road
-                            .modal-detail__road-row
-                                +svg("road-check").modal-detail__road-icon.modal-detail__road-icon--green
-                                p.modal-detail__road-text Обнаружено
-                                p.modal-detail__road-value  14:15  14.05.2025
-                            .modal-detail__road-row
-                                +svg("road-check").modal-detail__road-icon.modal-detail__road-icon--green
-                                p.modal-detail__road-text Отправлено уведомление
-                                p.modal-detail__road-value  18:15  14.05.2025
-                            .modal-detail__road-row
-                                +svg("road-check").modal-detail__road-icon.modal-detail__road-icon--green
-                                p.modal-detail__road-text Отправлено уведомление повторно
-                                p.modal-detail__road-value 1 час назад
-                            .modal-detail__road-row
-                                +svg("road-empty").modal-detail__road-icon
-                                p.modal-detail__road-text Удаление/блокировка/согласование
-                                p.modal-detail__road-value Ожидает
-                    // panel
-                    .modal-detail__panel
-                        p.modal-detail__panel-title
-                            +svg("clock").modal-detail__panel-title-icon
-                            | Действия
-                        .modal-detail__panel-action-list
-                            button.button.button--outline-hover-green
-                                +svg("check").button__icon
-                                | Согласовать
-                            button.button.button--outline-hover-red
-                                +svg("close").button__icon
-                                | Отклонить
-                            button.button.button--outline-hover-blue
-                                +svg("copy").button__icon
-                                | Открыть внешне
-                            button.button.button--outline-hover-blue
-                                +svg("link-external").button__icon
-                                | Копировать ссылку
+                .modal__content-wrap
+                    .modal-help__content-nav
+                        .modal-help__block
+                            p.modal-help__title Общие вопросы
+                            ul.modal-help__list
+                                li.modal-help__list-el.modal-help__list-el--opened
+                                    .modal-help__list-el-content
+                                        +svg("chevron-down").modal-help__list-el-icon
+                                        | Восстановление доступа
+                                    ul.modal-help__sublist
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Изменилась корпоративная почта
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Потеряли логин или пароль
+                                li.modal-help__list-el.modal-help__list-el--opened
+                                    .modal-help__list-el-content
+                                        +svg("chevron-down").modal-help__list-el-icon
+                                        | Контакты
+                                    ul.modal-help__sublist
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Как написать в службу поддержки?
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Как позвонить в службу поддержки?
+                        .modal-help__block
+                            p.modal-help__title Инструкции
+                            ul.modal-help__list
+                                li.modal-help__list-el.modal-help__list-el--opened
+                                    .modal-help__list-el-content
+                                        +svg("chevron-down").modal-help__list-el-icon
+                                        | Как скачать файл со статистикой?
+                                    ul.modal-help__sublist
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Текст
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Текст
+                                li.modal-help__list-el
+                                    .modal-help__list-el-content
+                                        +svg("chevron-down").modal-help__list-el-icon
+                                        | Текст
+                                    ul.modal-help__sublist
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Текст
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Текст
+                                li.modal-help__list-el
+                                    .modal-help__list-el-content
+                                        +svg("chevron-down").modal-help__list-el-icon
+                                        | Текст
+                                    ul.modal-help__sublist
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Текст
+                                        li.modal-help__sublist-el
+                                            +svg("file-document").modal-help__sublist-el-icon
+                                            | Текст
+                    .modal-help__content-slide
+                        p.modal-help__slide-title Как пользоваться системой в другой стране?
+                        p.modal-help__slide-text Данное лицензионное соглашение конечного пользователя "EULA" (End-User License Agreement) представляет собой законное соглашение между вами ("Покупатель" или "Сублицензиат") и компанией Alt-N Technologies ("Лицензиат") в отношении устанавливаемого вами программного продукта (продуктов) компании Alt-N, куда входит "онлайновая" или электронная документация, а также могут входить соответствующие носители и печатные материалы ("ПРОГРАММНЫЙ ПРОДУКТ" или
+                            |
+                            |
+                            a.modal-help__slide-link.modal-help__slide-link--blue(href="#") "ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ"
+                            |).
+                        img.modal-help__slide-img(src="/images/modals/img.png", alt="")
+                        p.modal-help__slide-text Данное лицензионное соглашение конечного пользователя "EULA" (End-User License Agreement) представляет собой законное соглашение между вами ("Покупатель" или "Сублицензиат") и компанией Alt-N Technologies ("Лицензиат") в отношении устанавливаемого вами программного продукта (продуктов) компании Alt-N, куда входит "онлайновая" или электронная документация, а также могут входить соответствующие носители и печатные материалы ("ПРОГРАММНЫЙ ПРОДУКТ" или
+                            |
+                            |
+                            a.modal-help__slide-link(href="#") "ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ"
+                            | ).
+            .modal__footer
+                p.modal__footer-text Если остались вопросы или нужна помощь
+                button.button.button--blue.button--round
+                    +svg("mail-open").button__icon
+                    |Написать нам

@@ -1,7 +1,9 @@
 .modal-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  &__content {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+  }
   
   &__card-grid {
 	display: grid;
@@ -10,165 +12,166 @@
   }
   
   &__card {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 16px;
-    border-radius: 8px;
-    border: 1px solid $color-border;
-  
-    &--red {
-      background-color: #FFE4E9;
-    }
-    &--violet {
-      background-color: #E1DAFF;
-    }
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 16px;
+	border-radius: 8px;
+	border: 1px solid $color-border;
+	
+	&--red {
+	  background-color: #FFE4E9;
+	}
+	
+	&--violet {
+	  background-color: #E1DAFF;
+	}
   }
   
   &__card-icon {
-    flex-shrink: 0;
-    display: block;
-    width: 24px;
-    height: 24px;
-  
-    .modal-detail__card--red & {
-      color: #E74B4D;
-    }
-  
-    .modal-detail__card--violet & {
-      color: #856CEF;
-    }
+	flex-shrink: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	
+	.modal-detail__card--red & {
+	  color: #E74B4D;
+	}
+	
+	.modal-detail__card--violet & {
+	  color: #856CEF;
+	}
   }
   
   &__card-text-box {
   }
   
   &__card-text {
-    margin-bottom: 4px;
-    font-size: 12px;
-    line-height: 1.2;
-    color: #616C7A;
+	margin-bottom: 4px;
+	font-size: 12px;
+	line-height: 1.2;
+	color: #616C7A;
   }
   
   &__card-value {
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 600;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
   }
   
   &__panel {
-    padding: 24px;
-    background-color: #F7F7FA;
-    border-radius: 8px;
+	padding: 24px;
+	background-color: #F7F7FA;
+	border-radius: 8px;
   }
   
   &__panel-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 24px;
-    font-size: 20px;
-    line-height: 1;
-    font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 24px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
   }
   
   &__panel-title-icon {
-    flex-shrink: 0;
-    display: block;
-    width: 24px;
-    height: 24px;
+	flex-shrink: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
   }
   
   &__data-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    margin-bottom: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	margin-bottom: 16px;
   }
   
   &__data-col {
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 600;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
   }
   
   &__data-text {
-    margin-bottom: 8px;
-    color: $color-text2;
+	margin-bottom: 8px;
+	color: $color-text2;
   }
   
   &__data-value {
   }
   
   &__data-link {
-    text-decoration: underline;
-    
-    &:hover {
-      text-decoration: none;
-    }
+	text-decoration: underline;
+	
+	&:hover {
+	  text-decoration: none;
+	}
   }
   
   &__data-cite {
-    font-size: 14px;
-    line-height: 1;
+	font-size: 14px;
+	line-height: 1;
   }
   
   &__data-cite-title {
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: $color-text2;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: $color-text2;
   }
   
   &__data-cite-text {
-    padding: 8px 16px;
-    border-radius: 8px;
-    background-color: $color-bg2;
-    line-height: 1.2;
+	padding: 8px 16px;
+	border-radius: 8px;
+	background-color: $color-bg2;
+	line-height: 1.2;
   }
   
   &__road {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
   }
   
   &__road-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
   }
   
   &__road-icon {
-    flex-shrink: 0;
-    display: block;
-    width: 16px;
-    height: 47px;
-    color: $color-text2;
-    
-    &--green {
-      color: #3BC363;
-    }
+	flex-shrink: 0;
+	display: block;
+	width: 16px;
+	height: 47px;
+	color: $color-text2;
+	
+	&--green {
+	  color: #3BC363;
+	}
   }
   
   &__road-text {
-    flex-grow: 1;
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 700;
+	flex-grow: 1;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 700;
   }
   
   &__road-value {
-    font-size: 12px;
-    line-height: 1.2;
-    font-weight: 500;
-    color: #616C7A;
+	font-size: 12px;
+	line-height: 1.2;
+	font-weight: 500;
+	color: #616C7A;
   }
   
   &__panel-action-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-items: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-items: flex-start;
   }
 }
