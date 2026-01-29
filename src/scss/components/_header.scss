@@ -7,7 +7,6 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 253px;
-  background-color: $color-bg2;
   box-shadow: 0 1px 4px rgba(#000, .2);
   
   &__container {
@@ -226,5 +225,18 @@
   &__account-btn-row {
 	display: flex;
 	gap: 16px;
+  }
+}
+
+// theme
+.theme-light {
+  .header {
+	background-color: #fff;
+  }
+}
+
+.theme-dark {
+  .header {
+	background-color: $color-bg1;
   }
 }

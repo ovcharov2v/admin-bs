@@ -10,7 +10,6 @@
 	padding: 16px;
 	border: 1px solid $color-border;
 	border-radius: 8px;
-	background-color: #F7F7FA;
   }
   
   &__main-box {
@@ -20,7 +19,6 @@
 	  padding: 16px 0;
 	  border: 1px solid $color-border;
 	  border-radius: 8px;
-	  background-color: #F7F7FA;
 	}
 	
 	.view-grid & {
@@ -58,21 +56,17 @@
   }
   
   &__main-checkbox-wrap {
-	background-color: #E2E8FF;
 	color: $color-text2;
 	
 	.card--green & {
-	  background-color: #F1F7F2;
 	  color: #3BC363;
 	}
 	
 	.card--orange & {
-	  background-color: #FFF8E8;
 	  color: #F89445;
 	}
 	
 	.card--red & {
-	  background-color: #FFE4E9;
 	  color: #E74B4D;
 	}
 	
@@ -87,7 +81,7 @@
 	}
 	
 	.view-list & {
-	  background-color: transparent;
+	  background-color: transparent !important;
 	}
   }
   
@@ -210,25 +204,12 @@
 	  padding: 16px;
 	  border-radius: 8px;
 	  border: 1px solid $color-border;
-	  background-color: #F7F7FA;
-	}
-	
-	.card--green & {
-	  background-color: #F1F7F2;
-	}
-	
-	.card--orange & {
-	  background-color: #FFF8E8;
-	}
-	
-	.card--red & {
-	  background-color: #FFE4E9;
 	}
 	
 	.view-grid & {
 	  padding-top: 20px;
 	  border-top: 1px solid $color-border;
-	  background-color: transparent;
+	  background-color: transparent !important;
 	}
   }
   
@@ -282,5 +263,83 @@
 	display: block;
 	width: 14px;
 	height: 12px;
+  }
+}
+
+// theme
+.theme-light {
+  .view-grid .card {
+	background-color: #F7F7FA;
+  }
+  
+  .view-list .card__main-box {
+	background-color: #F7F7FA;
+  }
+  
+  .view-list .card__action-box {
+	background-color: #F7F7FA;
+  }
+  
+  .view-grid .card__action-box {
+	background-color: transparent;
+  }
+  
+  .card--green .card__action-box {
+	background-color: #F1F7F2;
+  }
+  
+  .card--orange .card__action-box {
+	background-color: #FFF8E8;
+  }
+  
+  .card--red .card__action-box {
+	background-color: #FFE4E9;
+  }
+  
+  .card .card__main-checkbox-wrap {
+	background-color: #E2E8FF;
+  }
+  
+  .card--green .card__main-checkbox-wrap {
+	background-color: #F1F7F2;
+  }
+  
+  .card--orange .card__main-checkbox-wrap {
+	background-color: #FFF8E8;
+  }
+  
+  .card--red .card__main-checkbox-wrap {
+	background-color: #FFE4E9;
+  }
+}
+
+.theme-dark {
+  .view-grid .card {
+	background-color: #2D2D2D;
+  }
+  
+  .view-list .card__main-box {
+	background-color: #2D2D2D;
+  }
+  
+  .view-list .card__action-box {
+	background-color: #2D2D2D;
+  }
+  
+  
+  .card .card__main-checkbox-wrap {
+	background-color: #3D3852;
+  }
+  
+  .card--green .card__main-checkbox-wrap {
+	background-color: #3e4f41;
+  }
+  
+  .card--orange .card__main-checkbox-wrap {
+	background-color: #454138;
+  }
+  
+  .card--red .card__main-checkbox-wrap {
+	background-color: #503131;
   }
 }

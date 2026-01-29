@@ -48,5 +48,11 @@ input, button, textarea {
 	  background-color: #E74B4D;
 	}
   }
+  
+  &--green {
+	&::before {
+	  background-color: #3BC363;
+	}
+  }
 }
 

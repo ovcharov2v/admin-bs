@@ -10,6 +10,10 @@
   font-weight: 500;
   transition: border-color $transition-default;
   
+  &:hover {
+	border-color: #4259E9;
+  }
+  
   &__theme {
 	display: none;
 	align-items: center;
@@ -29,9 +33,6 @@
 // theme
 .theme-light {
   .theme-switcher {
-	&:hover {
-	  border-color: #4259E9;
-	}
 	&__theme {
 	  &--light {
 		display: inline-flex;
@@ -42,9 +43,6 @@
 
 .theme-dark {
   .theme-switcher {
-	&:hover {
-	  border-color: transparent;
-	}
 	&__theme {
 	  &--dark {
 		display: inline-flex;

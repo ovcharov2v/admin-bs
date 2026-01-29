@@ -18,7 +18,7 @@
   
   &__btn {
 	padding: 10px 12px;
-	border: 1px solid #E2E7F0;
+	border: 1px solid;
 	border-radius: 4px;
 	background-color: transparent;
 	font-size: 12px;
@@ -28,6 +28,7 @@
 	transition: border-color $transition-default, color $transition-default, background-color $transition-default;
 	
 	&:disabled {
+	  background-color: transparent !important;
 	  color: $color-text2;
 	  cursor: not-allowed;
 	}
@@ -44,4 +45,22 @@
 	line-height: 1;
 	color: $color-text2;
   }
+}
+
+//373737
+// theme
+.theme-light {
+  .pagination {
+	&__btn {
+	  border-color: #E2E7F0;
+	}
+  }
+}
+
+.theme-dark {.pagination {
+  &__btn {
+	background-color: #333;
+	border-color: #444;
+  }
+}
 }

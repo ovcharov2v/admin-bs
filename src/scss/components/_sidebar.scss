@@ -7,7 +7,6 @@
   flex-direction: column;
   width: 254px;
   height: 100%;
-  background-color: $color-bg2;
   border-right: 1px solid $color-border;
   
   &__logo-box {
@@ -92,16 +91,6 @@
 	&:hover {
 	  color: $color-text1;
 	}
-	
-	&--active {
-	  background-color: #E2E8FF;
-	  border-color: #B7C6FA;
-	  color: #4259E9 !important;
-	  
-	  &::after {
-		opacity: 1;
-	  }
-	}
   }
   
   &__nav-icon {
@@ -120,50 +109,61 @@
   }
   
   &__status {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
 	font-size: 12px;
 	line-height: 1.2;
 	color: $color-text2;
-	
-	&::before {
-	  flex-shrink: 0;
-	  display: block;
-	  width: 8px;
-	  height: 8px;
-	  border-radius: 50%;
-	  content: "";
-	}
-	
-	&--green {
-	  &::before {
-		background-color: #3BC363;
-	  }
-	}
- 
-	&--red {
-	  &::before {
-		background-color: #E74B4D;
-	  }
-	}
   }
 }
 
 // theme
 .theme-light {
   .sidebar {
+	background-color: #fff;
+	
 	&__logo-img {
 	  color: #4259E9;
+	}
+	
+	&__nav-link {
+	  &:hover {
+		background-color: $color-bg1;
+	  }
+	  
+	  &--active {
+		background-color: #E2E8FF !important;
+		border-color: #B7C6FA;
+		color: #4259E9 !important;
+		
+		&::after {
+		  opacity: 1;
+		}
+	  }
 	}
   }
 }
 
 .theme-dark {
   .sidebar {
+	background-color: #181818;
+	
 	&__logo-img {
 	  color: #E74B4D;
+	}
+	
+	&__nav-link {
+	  &:hover {
+		background-color: #212121;
+	  }
+	  
+	  &--active {
+		background-color: #2A2A2A !important;
+		border-color: #373737;
+		color: $color-text1;
+		
+		&::after {
+		  opacity: 1;
+		}
+	  }
 	}
   }
 }
