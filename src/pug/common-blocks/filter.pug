@@ -6,23 +6,31 @@ mixin filter()
                 | Таблица угроз
             .filter__nav-list
                 .filter__nav-group
-                    button.button.button--blue
+                    button.button.button--blue.button--md
                         +svg("plus").button__icon
                         | Добавить нарушение
-                    button.button.button--outline-hover-blue.button--icon(aria-label="Печать")
+                    button.button.button--outline-hover-blue.button--icon.button--md(aria-label="Печать", data-tippy-content="Печать")
                         +svg("printer").button__icon
-                    button.button.button--outline-hover-blue.button--icon(aria-label="Скачать")
+                    button.button.button--outline-hover-blue.button--icon.button--md(aria-label="Скачать", data-tippy-content="Скачать")
                         +svg("upload").button__icon
                 .filter__nav-group
-                    button.button.button--outline-hover-blue.button--icon.button--active(aria-label="Строки", data-view="view-list")
+                    button.button.button--outline-hover-blue.button--icon.button--md.button--active(aria-label="Строки", data-view="view-list", data-tippy-content="Строки")
                         +svg("category").button__icon
-                    button.button.button--outline-hover-blue.button--icon(aria-label="Плитка", data-view="view-grid")
+                    button.button.button--outline-hover-blue.button--icon.button--md(aria-label="Плитка", data-view="view-grid", data-tippy-content="Плитка")
                         +svg("apps").button__icon
-                    button.button.button--outline-hover-blue.button--icon(aria-label="Таблица", data-view="view-table")
+                    button.button.button--outline-hover-blue.button--icon.button--md(aria-label="Таблица", data-view="view-table", data-tippy-content="Таблица")
                         +svg("grid").button__icon
-                    button.button.button--outline-hover-blue.filter__toggle.js-filter-toggle
+                    button.button.button--outline-hover-blue.button--md.filter__toggle.js-filter-toggle
                         | Фильтры и поиск
                         +svg("chevron-down").button__icon
+                .filter__nav-group
+                    button.button.button--blue.button--md
+                        | Выбрано: 3
+                        +svg("close").button__icon
+                    button.button.button--outline-hover-green2.button--icon.button--md(data-tippy-content="Подсказка")
+                        +svg("check").button__icon
+                    button.button.button--outline-hover-red2.button--icon.button--md(data-tippy-content="Подсказка")
+                        +svg("close").button__icon
         .filter__options-box
             .filter__options
                 .filter__row
