@@ -39,6 +39,7 @@
 	  line-height: 16px;
 	  font-weight: 600;
 	  white-space: nowrap;
+	  color: $color-text1;
 	}
   }
   
@@ -83,6 +84,20 @@
 	}
   }
   
+  &__blue-link {
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #4259E9;
+	text-decoration: underline;
+	transition: color $transition-default;
+	
+	&:hover {
+	  color: $color-text1;
+	}
+  }
+  
   &__actions {
 	display: flex;
 	gap: 4px;
@@ -92,5 +107,12 @@
 		width: 100%;
 	  }
 	}
+  }
+  
+  &__strong {
+	font-size: 16px;
+	line-height: 1;
+	font-weight: 600;
+	color: $color-text1;
   }
 }

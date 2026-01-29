@@ -1,0 +1,40 @@
+extends pug/cp
+
+block content
+    .page
+        .container.page__container
+            // data table
+            .data-table.view-table
+                // filter
+                +filter3().data-table__filter
+                // content
+                .data-table__content
+                    table.table.data-table__table
+                        thead.table__head
+                            // tr
+                            tr.table__row
+                                th.table__cell
+                                    .table__cell-wrap Бренд
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Ссылка
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                        tbody.table__body
+                            -let i = 0;
+                            while i < 20
+                                // tr
+                                tr.table__row
+                                    td.table__cell
+                                        p.table__strong М-Видео
+                                    td.table__cell
+                                        a.table__blue-link(href="#") qcxgPBwVi2Nl23taA/Для-банков?node-id=387-22880&t=JTNsBEu0eKmle5So-0
+                                - i++
+                    .data-table__pagination
+                        +pagination()
+
+
+
+
+

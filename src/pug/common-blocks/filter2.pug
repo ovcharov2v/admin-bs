@@ -1,0 +1,68 @@
+mixin filter2()
+    .filter&attributes(attributes)
+        .filter__header
+            h2.filter__title
+                +svg("file-document").filter__title-icon
+                | Отчеты
+            .filter__nav-list
+                .filter__nav-group
+                    button.button.button--blue.button--md
+                        +svg("plus").button__icon
+                        | Создать отчет
+                    button.button.button--outline-hover-blue.button--md.filter__toggle.js-filter-toggle
+                        | Фильтры и поиск
+                        +svg("chevron-down").button__icon
+        .filter__options-box
+            .filter__options
+                .filter__row
+                    // group
+                    .form-group.form-group--search.filter__row-group.filter__row-group--search
+                        .form-group__title-box
+                            p.form-group__title Поиск
+                            button.form-group__reset-btn
+                                +svg("close").form-group__reset-icon
+                                | Сбросить
+                        .form-group__input-box
+                            .form-group__action-btn
+                                +svg("search").form-group__action-icon
+                            input.form-group__input.form-group__input--sm(type="search", placeholder="Нажмите для поиска")
+                    // group
+                    .form-group.filter__row-group
+                        .form-group__title-box
+                            p.form-group__title Дата:
+                            button.form-group__reset-btn
+                                +svg("close").form-group__reset-icon
+                                | Сбросить
+                        .form-group__radio-row
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="priority", checked)
+                                span.form-group__radio-text За Июнь
+                            label.form-group__radio
+                                input.form-group__radio-input(type="radio", name="priority")
+                                span.form-group__radio-text За Август
+                            input.form-group__input.form-group__input--sm(type="date")
+                    // group
+                    .form-group.filter__row-group.filter__row-group--search
+                        .form-group__title-box
+                            p.form-group__title Бренд:
+                            button.form-group__reset-btn
+                                +svg("close").form-group__reset-icon
+                                | Сбросить
+                        .form-group__input-box
+                            select.form-group__input.form-group__input--sm.form-group__input--transparent
+                                option 1
+                                option 2
+                                option Тег 3
+                                option Тег 4
+                        .label-group.form-group__label-group
+                            .label.label--blue
+                                span.label__text МВидео
+                                button.label__close(aria-label="Закрыть")
+                                    +svg("close").label__close-icon
+                            .label.label--blue
+                                span.label__text  #Эльдорадо
+                                button.label__close(aria-label="Закрыть")
+                                    +svg("close").label__close-icon
+            .filter__btn-box
+                button.button.button--outline-red Сбросить
+                button.button.button--outline-blue Показать 234 записи

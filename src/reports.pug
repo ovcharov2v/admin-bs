@@ -1,0 +1,56 @@
+extends pug/cp
+
+block content
+    .page
+        .container.page__container
+            // data table
+            .data-table.view-table
+                // filter
+                +filter2().data-table__filter
+                // content
+                .data-table__content
+                    table.table.data-table__table
+                        thead.table__head
+                            // tr
+                            tr.table__row
+                                th.table__cell
+                                    .table__cell-wrap Название
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Бренд
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Тип отчета
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Дата загрузки
+                                        button.table__sort-btn(aria-label="Сортировка")
+                                            +svg("arrow-move-ver").table__sort-btn-icon
+                                th.table__cell
+                                    .table__cell-wrap Действия
+                        tbody.table__body
+                            -let i = 0;
+                            while i < 20
+                                // tr
+                                tr.table__row
+                                    td.table__cell
+                                        p.table__strong Ежемесячный отчет по М-Видео 11.02.25-11.02.25
+                                    td.table__cell М-Видео
+                                    td.table__cell Ежемесячный отчет
+                                    td.table__cell 11.11.2025
+                                    td.table__cell
+                                        .table__actions
+                                            button.button.button--outline-hover-blue2
+                                                +svg("upload").button__icon
+                                                | Скачать  PDF
+                                - i++
+                    .data-table__pagination
+                        +pagination()
+
+
+
+
+
