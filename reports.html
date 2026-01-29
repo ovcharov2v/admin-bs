@@ -1,0 +1,1094 @@
+<!DOCTYPE html(lang="ru")>
+<html class="theme-light">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="description" content="Admin BS"/>
+		<title>Admin BS</title>
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
+		<link rel="stylesheet" href="/lib/tippy.css"/>
+		<link rel="stylesheet" href="./css/main.css?v=1769703267248"/>
+	</head>
+	<body>
+		<!-- Sidebar-->
+		<aside class="sidebar">
+			<div class="sidebar__logo-box">
+				<div class="sidebar__logo">
+					<svg class="sidebar__logo-img">
+						<use xlink:href="#logo"></use>
+					</svg>
+					<div class="sidebar__logo-text">
+						<p class="sidebar__logo-name">BrandSecurity</p>
+						<p class="sidebar__logo-description">drp platform</p>
+					</div>
+				</div>
+			</div>
+			<nav class="sidebar__nav">
+				<ul class="sidebar__nav-list">
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link sidebar__nav-link--active" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#chart-line"></use>
+							</svg>Панель управления</a></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#shield-warning"></use>
+							</svg>Фишинг</a></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#eye"></use>
+							</svg>Использование ТЗ</a></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#mobile-button"></use>
+							</svg>Моб. приложения</a></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#water-drop"></use>
+							</svg>Утечки</a></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#share"></use>
+							</svg>Фейковые аккаунты</a></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#paper-plane"></use>
+							</svg>Мессенджеры</a></li>
+					<li class="sidebar__nav-separator"></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#shield-check"></use>
+							</svg>Белый список</a></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#file-document"></use>
+							</svg>Отчеты</a></li>
+					<li class="sidebar__nav-separator"></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#settings"></use>
+							</svg>Настройки</a></li>
+					<li class="sidebar__nav-elem"><a class="sidebar__nav-link" href="#">
+							<svg class="sidebar__nav-icon">
+								<use xlink:href="#circle-help"></use>
+							</svg>Помощь и поддержка</a></li>
+				</ul>
+			</nav>
+			<div class="sidebar__status-box">
+				<p class="sidebar__status text-with-dot text-with-dot--green">Все системы работают</p>
+			</div>
+		</aside>
+		<main class="main">
+			<!-- Header-->
+			<header class="header">
+				<div class="container header__container">
+					<div class="header__left-box">
+						<p class="header__title">Панель анализа угроз</p>
+						<div class="form-group form-group--search header__search">
+							<div class="form-group__input-box">
+								<div class="form-group__action-btn">
+									<svg class="form-group__action-icon">
+										<use xlink:href="#search"></use>
+									</svg>
+								</div>
+								<input class="form-group__input" type="search" placeholder="Поиск угроз..."/>
+							</div>
+						</div>
+					</div>
+					<div class="header__right-box">
+						<div class="header__nav-box">
+							<button class="theme-switcher">
+								<div class="theme-switcher__theme theme-switcher__theme--light">
+									<svg class="theme-switcher__icon">
+										<use xlink:href="#sun"></use>
+									</svg>Светлая
+								</div>
+								<div class="theme-switcher__theme theme-switcher__theme--dark">
+									<svg class="theme-switcher__icon">
+										<use xlink:href="#moon"></use>
+									</svg>Тёмная
+								</div>
+							</button>
+							<button class="button button--outline-hover-blue button--icon button--round" aria-label="Обновить">
+								<svg class="button__icon">
+									<use xlink:href="#reload"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="header__profile">
+							<div class="header__profile-data">
+								<p class="header__profile-name">Роман Андерсон</p>
+								<p class="header__profile-job">Аналитик безопасности</p>
+							</div>
+							<div class="header__profile-icon-box">
+								<svg class="header__profile-icon">
+									<use xlink:href="#user"></use>
+								</svg>
+							</div>
+							<button class="header__profile-btn" aria-label="Профиль">
+								<svg class="header__profile-btn-icon">
+									<use xlink:href="#chevron-down"></use>
+								</svg>
+							</button>
+							<div class="header__account">
+								<button class="header__account-close" type="button" aria-label="Закрыть">
+									<svg class="header__account-close-icon">
+										<use xlink:href="#close"></use>
+									</svg>
+								</button>
+								<div class="header__account-content">
+									<p class="header__account-email">Mvidio@client.brandsecurity.ru</p><img class="header__account-logo" src="/images/client.png" alt=""/>
+									<div class="header__account-data">
+										<p class="header__account-company">М-Видео</p>
+										<p class="header__account-name">Роман Андерсон</p>
+									</div>
+								</div>
+								<div class="header__account-bottom">
+									<div class="header__account-btn-row">
+										<button class="button button--outline-blue button--round" type="button">Cменить пароль</button>
+										<button class="button button--outline-blue button--round" type="button">Мой профиль</button>
+									</div>
+									<button class="button button--outline-blue2 button--round" type="button">
+										<svg class="button__icon">
+											<use xlink:href="#exit"></use>
+										</svg>Выйти
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="page">
+				<div class="container page__container">
+					<!-- data table-->
+					<div class="data-table view-table">
+						<!-- filter-->
+						<div class="filter data-table__filter">
+							<div class="filter__header">
+								<h2 class="filter__title">
+									<svg class="filter__title-icon">
+										<use xlink:href="#file-document"></use>
+									</svg>Отчеты
+								</h2>
+								<div class="filter__nav-list">
+									<div class="filter__nav-group">
+										<button class="button button--blue button--md">
+											<svg class="button__icon">
+												<use xlink:href="#plus"></use>
+											</svg>Создать отчет
+										</button>
+										<button class="button button--outline-hover-blue button--md filter__toggle js-filter-toggle">Фильтры и поиск
+											<svg class="button__icon">
+												<use xlink:href="#chevron-down"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="filter__options-box">
+								<div class="filter__options">
+									<div class="filter__row">
+										<!-- group-->
+										<div class="form-group form-group--search filter__row-group filter__row-group--search">
+											<div class="form-group__title-box">
+												<p class="form-group__title">Поиск</p>
+												<button class="form-group__reset-btn">
+													<svg class="form-group__reset-icon">
+														<use xlink:href="#close"></use>
+													</svg>Сбросить
+												</button>
+											</div>
+											<div class="form-group__input-box">
+												<div class="form-group__action-btn">
+													<svg class="form-group__action-icon">
+														<use xlink:href="#search"></use>
+													</svg>
+												</div>
+												<input class="form-group__input form-group__input--sm" type="search" placeholder="Нажмите для поиска"/>
+											</div>
+										</div>
+										<!-- group-->
+										<div class="form-group filter__row-group">
+											<div class="form-group__title-box">
+												<p class="form-group__title">Дата:</p>
+												<button class="form-group__reset-btn">
+													<svg class="form-group__reset-icon">
+														<use xlink:href="#close"></use>
+													</svg>Сбросить
+												</button>
+											</div>
+											<div class="form-group__radio-row">
+												<label class="form-group__radio">
+													<input class="form-group__radio-input" type="radio" name="priority" checked="checked"/><span class="form-group__radio-text">За Июнь</span>
+												</label>
+												<label class="form-group__radio">
+													<input class="form-group__radio-input" type="radio" name="priority"/><span class="form-group__radio-text">За Август</span>
+												</label>
+												<input class="form-group__input form-group__input--sm" type="date"/>
+											</div>
+										</div>
+										<!-- group-->
+										<div class="form-group filter__row-group filter__row-group--search">
+											<div class="form-group__title-box">
+												<p class="form-group__title">Бренд:</p>
+												<button class="form-group__reset-btn">
+													<svg class="form-group__reset-icon">
+														<use xlink:href="#close"></use>
+													</svg>Сбросить
+												</button>
+											</div>
+											<div class="form-group__input-box">
+												<select class="form-group__input form-group__input--sm form-group__input--transparent">
+													<option>1</option>
+													<option>2</option>
+													<option>Тег 3</option>
+													<option>Тег 4</option>
+												</select>
+											</div>
+											<div class="label-group form-group__label-group">
+												<div class="label label--blue"><span class="label__text">МВидео</span>
+													<button class="label__close" aria-label="Закрыть">
+														<svg class="label__close-icon">
+															<use xlink:href="#close"></use>
+														</svg>
+													</button>
+												</div>
+												<div class="label label--blue"><span class="label__text"> #Эльдорадо</span>
+													<button class="label__close" aria-label="Закрыть">
+														<svg class="label__close-icon">
+															<use xlink:href="#close"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="filter__btn-box">
+									<button class="button button--outline-red">Сбросить</button>
+									<button class="button button--outline-blue">Показать 234 записи</button>
+								</div>
+							</div>
+						</div>
+						<!-- content-->
+						<div class="data-table__content">
+							<table class="table data-table__table">
+								<thead class="table__head">
+									<!-- tr-->
+									<tr class="table__row">
+										<th class="table__cell">
+											<div class="table__cell-wrap">Название
+												<button class="table__sort-btn" aria-label="Сортировка">
+													<svg class="table__sort-btn-icon">
+														<use xlink:href="#arrow-move-ver"></use>
+													</svg>
+												</button>
+											</div>
+										</th>
+										<th class="table__cell">
+											<div class="table__cell-wrap">Бренд
+												<button class="table__sort-btn" aria-label="Сортировка">
+													<svg class="table__sort-btn-icon">
+														<use xlink:href="#arrow-move-ver"></use>
+													</svg>
+												</button>
+											</div>
+										</th>
+										<th class="table__cell">
+											<div class="table__cell-wrap">Тип отчета
+												<button class="table__sort-btn" aria-label="Сортировка">
+													<svg class="table__sort-btn-icon">
+														<use xlink:href="#arrow-move-ver"></use>
+													</svg>
+												</button>
+											</div>
+										</th>
+										<th class="table__cell">
+											<div class="table__cell-wrap">Дата загрузки
+												<button class="table__sort-btn" aria-label="Сортировка">
+													<svg class="table__sort-btn-icon">
+														<use xlink:href="#arrow-move-ver"></use>
+													</svg>
+												</button>
+											</div>
+										</th>
+										<th class="table__cell">
+											<div class="table__cell-wrap">Действия</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody class="table__body">
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+									<!-- tr-->
+									<tr class="table__row">
+										<td class="table__cell">
+											<p class="table__strong">Ежемесячный отчет по М-Видео 11.02.25-11.02.25</p>
+										</td>
+										<td class="table__cell">М-Видео</td>
+										<td class="table__cell">Ежемесячный отчет</td>
+										<td class="table__cell">11.11.2025</td>
+										<td class="table__cell">
+											<div class="table__actions">
+												<button class="button button--outline-hover-blue2">
+													<svg class="button__icon">
+														<use xlink:href="#upload"></use>
+													</svg>Скачать  PDF
+												</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="data-table__pagination">
+								<!-- pagination-->
+								<div class="pagination">
+									<p class="pagination__text">Показано 1-7 из 15 доменов</p>
+									<div class="pagination__nav-box">
+										<button class="pagination__btn" type="button" disabled="disabled">< предыдущая</button><span class="pagination__pages">1 из 2</span>
+										<button class="pagination__btn" type="button">следующая ></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="/lib/popper.min.js"></script>
+		<script src="/lib/tippy-bundle.iife.min.js"></script>
+		<script src="./js/main.js?v=1769703267253"></script><svg width="0" height="0" class="hidden">
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="trending-up">
+        <path d="M13.334 4.66699L9.43652 8.62533C9.36653 8.69642 9.33114 8.73204 9.2998 8.76008C8.79356 9.2132 8.02805 9.21321 7.52181 8.76009C7.49047 8.73204 7.45482 8.69645 7.38478 8.62532C7.31475 8.55419 7.27971 8.51861 7.24837 8.49056C6.74213 8.03744 5.9763 8.03744 5.47006 8.49056C5.4388 8.51854 5.40387 8.55401 5.33418 8.6248L2.66699 11.3337M13.334 4.66699L13.3337 8.66699M13.334 4.66699H9.33366" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="triangle-down">
+        <path d="M7.99995 11L3.66982 6.5L12.3301 6.5L7.99995 11Z" fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="upload">
+        <g clip-path="url(#clip0_14_959)">
+            <path d="M4.66699 8.00033L8.00032 11.3337M8.00032 11.3337L11.3337 8.00033M8.00032 11.3337L8.00033 2.66699" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4 13.333H12" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_14_959">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="user">
+        <path d="M5 20V19C5 16.2386 7.23858 14 10 14H14C16.7614 14 19 16.2386 19 19V20M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="water-drop">
+        <path d="M10.6664 8.92285C10.6664 9.7389 10.3504 10.5215 9.78776 11.0986C9.46836 11.4262 9.08424 11.6724 8.66634 11.8239M12.6663 9.12788C12.6663 4.74326 7.99967 1.33301 7.99967 1.33301C7.99967 1.33301 3.33301 4.74326 3.33301 9.12788C3.33301 10.42 3.82467 11.6592 4.69984 12.5729C5.57501 13.4865 6.76205 13.9993 7.99973 13.9993C9.23741 13.9993 10.4243 13.4862 11.2995 12.5726C12.1746 11.659 12.6663 10.42 12.6663 9.12788Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="wave-high">
+        <path d="M10.8665 13C11.5999 11.4667 11.9999 9.8 11.9999 8C11.9999 6.2 11.5999 4.46667 10.8665 3M8.46647 11.8667C8.9998 10.6667 9.33314 9.3334 9.33314 8.00006C9.33314 6.66673 8.9998 5.26673 8.46647 4.06673M6.06657 10.7333C6.46657 9.8666 6.66657 8.93327 6.66657 7.99993C6.66657 7.0666 6.46657 6.0666 6.06657 5.2666M3.6665 9.5334C3.8665 9.06673 3.99984 8.5334 3.99984 8.00006C3.99984 7.46673 3.8665 6.86673 3.6665 6.40006" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="wave-low">
+        <path d="M8.39958 10.6669C8.79958 9.80019 8.99958 8.86686 8.99958 7.93353C8.99958 7.0002 8.79958 6.0002 8.39958 5.2002M5.99951 9.46699C6.19951 9.00033 6.33285 8.46699 6.33285 7.93366C6.33285 7.40033 6.19951 6.80033 5.99951 6.33366" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="wave-medium">
+        <path d="M9.79948 11.8C10.3328 10.6 10.6661 9.26667 10.6661 7.93333C10.6661 6.6 10.3328 5.2 9.79948 4M7.39958 10.6665C7.79958 9.79987 7.99958 8.86654 7.99958 7.9332C7.99958 6.99987 7.79958 5.99987 7.39958 5.19987M4.99951 9.46667C5.19951 9 5.33285 8.46667 5.33285 7.93333C5.33285 7.4 5.19951 6.8 4.99951 6.33333" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="zoom-in">
+        <path d="M2.66699 10.0003V12.0003C2.66699 12.7367 3.26395 13.3337 4.00033 13.3337H6.00033M10.1452 13.3337H12.0003C12.7367 13.3337 13.3337 12.7367 13.3337 12.0003V10.0003M13.3337 6.00033V4.00033C13.3337 3.26395 12.7367 2.66699 12.0003 2.66699H10.0003M2.66699 6.00033V4.00033C2.66699 3.26395 3.26395 2.66699 4.00033 2.66699H6.00033" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        <circle cx="8" cy="8" r="1.335" stroke="currentColor" stroke-width="1.33"></circle>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 47" id="road-check">
+        <circle cx="8" cy="8" r="8" fill="currentColor"></circle>
+        <rect x="7.5" y="15" width="1" height="32" fill="currentColor"></rect>
+        <g clip-path="url(#clip0_416_29036)">
+            <circle cx="8" cy="8" r="6" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></circle>
+            <path d="M10 6.66602L7.33333 9.33268L6 7.99935" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_416_29036">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 47" id="road-empty">
+        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="2"></circle>
+        <rect x="7.5" y="15" width="1" height="32" fill="currentColor"></rect>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="apps">
+        <g clip-path="url(#clip0_59_2654)">
+            <path d="M2.66699 2.66699H4.00033V4.00033H2.66699V2.66699Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2.66699 12H4.00033V13.3333H2.66699V12Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M12 2.66699H13.3333V4.00033H12V2.66699Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M12 7.33301H13.3333V8.66634H12V7.33301Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M7.33301 7.33301H8.66634V8.66634H7.33301V7.33301Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2.66699 7.33301H4.00033V8.66634H2.66699V7.33301Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M7.33301 2.66699H8.66634V4.00033H7.33301V2.66699Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M7.33301 12H8.66634V13.3333H7.33301V12Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M12 12H13.3333V13.3333H12V12Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_59_2654">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="apps2">
+        <path d="M2.66699 3.33366C2.66699 2.96547 2.96547 2.66699 3.33366 2.66699H6.00033C6.36852 2.66699 6.66699 2.96547 6.66699 3.33366V6.00033C6.66699 6.36852 6.36852 6.66699 6.00033 6.66699H3.33366C2.96547 6.66699 2.66699 6.36852 2.66699 6.00033V3.33366Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M2.66699 10.0003C2.66699 9.63214 2.96547 9.33366 3.33366 9.33366H6.00033C6.36852 9.33366 6.66699 9.63214 6.66699 10.0003V12.667C6.66699 13.0352 6.36852 13.3337 6.00033 13.3337H3.33366C2.96547 13.3337 2.66699 13.0352 2.66699 12.667V10.0003Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M9.33366 3.33366C9.33366 2.96547 9.63214 2.66699 10.0003 2.66699H12.667C13.0352 2.66699 13.3337 2.96547 13.3337 3.33366V6.00033C13.3337 6.36852 13.0352 6.66699 12.667 6.66699H10.0003C9.63214 6.66699 9.33366 6.36852 9.33366 6.00033V3.33366Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M9.33366 10.0003C9.33366 9.63214 9.63214 9.33366 10.0003 9.33366H12.667C13.0352 9.33366 13.3337 9.63214 13.3337 10.0003V12.667C13.3337 13.0352 13.0352 13.3337 12.667 13.3337H10.0003C9.63214 13.3337 9.33366 13.0352 9.33366 12.667V10.0003Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="arrow-move-hor">
+        <path d="M10 8H13.7712M13.7712 8L11.8856 6.11438M13.7712 8L11.8856 9.88562" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M6 8H2.22876M2.22876 8L4.11438 9.88562M2.22876 8L4.11438 6.11438" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="arrow-move-ver">
+        <path d="M8.00033 2.66699L10.3337 5.00033M8.00033 2.66699L5.66699 5.00033M8.00033 2.66699V6.50049M8.00033 13.3337L5.66699 11.0003M8.00033 13.3337L10.3337 11.0003M8.00033 13.3337V9.50049" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="attention-circle">
+        <g clip-path="url(#clip0_59_2590)">
+            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></circle>
+            <rect x="8" y="10.667" width="0.00666667" height="0.00666667" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></rect>
+            <path d="M8 8L8 5.33333" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_59_2590">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 21" id="attention-triangle">
+        <path d="M11.3707 6.87472V11.458M2.63822 13.9786C1.59616 15.7835 1.07529 16.6863 1.15312 17.4268C1.22101 18.0728 1.56001 18.6596 2.08545 19.0413C2.68764 19.4788 3.72905 19.4788 5.81174 19.4788H16.9296C19.0123 19.4788 20.0536 19.4788 20.6558 19.0413C21.1812 18.6596 21.5204 18.0728 21.5883 17.4268C21.6661 16.6863 21.1454 15.7835 20.1033 13.9786L14.5463 4.35367C13.5043 2.54878 12.983 1.64649 12.3028 1.34363C11.7095 1.07947 11.0315 1.07947 10.4382 1.34363C9.75826 1.64636 9.23732 2.54866 8.19613 4.35205L2.63822 13.9786ZM11.4289 14.8955V15.0101L11.3136 15.0103V14.8955H11.4289Z" stroke="currentColor" stroke-width="2.29166" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="bell-ring">
+        <path d="M10.0003 11.3337V12.0003C10.0003 13.1049 9.1049 14.0003 8.00033 14.0003C6.89576 14.0003 6.00033 13.1049 6.00033 12.0003V11.3337M10.0003 11.3337H6.00033M10.0003 11.3337H12.394C12.649 11.3337 12.7771 11.3337 12.8804 11.2988C13.0776 11.2323 13.232 11.0774 13.2985 10.8802C13.3335 10.7765 13.3335 10.648 13.3335 10.391C13.3335 10.2785 13.3333 10.2222 13.3245 10.1686C13.3079 10.0673 13.2686 9.97122 13.2087 9.8878C13.1771 9.84373 13.1368 9.8035 13.0575 9.72421L12.7979 9.46452C12.7141 9.38073 12.667 9.26708 12.667 9.1486V6.66699C12.667 4.08966 10.5777 2.00032 8.00033 2.00033C5.423 2.00033 3.33366 4.08967 3.33366 6.66699V9.14861C3.33366 9.2671 3.28649 9.38073 3.2027 9.46452L2.94303 9.72419C2.86351 9.80372 2.82369 9.84369 2.79199 9.88782C2.7321 9.97124 2.69242 10.0673 2.67579 10.1686C2.66699 10.2222 2.66699 10.2785 2.66699 10.391C2.66699 10.648 2.66699 10.7765 2.70196 10.8802C2.76849 11.0774 2.92352 11.2323 3.12077 11.2988C3.22403 11.3337 3.35167 11.3337 3.6067 11.3337H6.00033M12.0127 1.34277C12.9322 2.03565 13.6565 2.95484 14.1153 4.01082M3.9883 1.34277C3.06883 2.03565 2.34446 2.95484 1.88574 4.01082" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="calendar">
+        <path d="M13.3337 6.66667V5.33333C13.3337 4.22876 12.4382 3.33333 11.3337 3.33333H4.66699C3.56242 3.33333 2.66699 4.22876 2.66699 5.33333V6.66667M13.3337 6.66667V12C13.3337 13.1046 12.4382 14 11.3337 14H4.66699C3.56242 14 2.66699 13.1046 2.66699 12V6.66667M13.3337 6.66667H2.66699M5.33366 2V4.66667M10.667 2V4.66667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="category">
+        <rect x="2" y="2.66699" width="12" height="4.66667" rx="1.66667" stroke="currentColor" stroke-width="1.33333"></rect>
+        <rect x="2" y="9.33398" width="12" height="4.66667" rx="1.66667" stroke="currentColor" stroke-width="1.33333"></rect>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="chart-line">
+        <path d="M2 2.66699V10.0005V11.2003C2 11.9471 2 12.3202 2.14532 12.6054C2.27316 12.8563 2.47698 13.0606 2.72786 13.1885C3.0128 13.3337 3.386 13.3337 4.13127 13.3337H14.0001" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M5.33301 11.333V9.33301M8.66634 11.333V3.33301M11.9997 11.333V7.33301" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="chart-line2">
+        <path d="M2 9.99983V11.1997C2 11.9464 2 12.3195 2.14532 12.6047C2.27316 12.8556 2.47698 13.06 2.72786 13.1878C3.0128 13.333 3.386 13.333 4.13127 13.333H14.0001M2 9.99983V3.33301M2 9.99983L4.56893 7.85905L4.57106 7.85735C5.03578 7.47008 5.26859 7.27607 5.52103 7.19727C5.81925 7.10417 6.14047 7.1189 6.42904 7.23861C6.67367 7.34009 6.88817 7.55459 7.31717 7.9836L7.32148 7.9879C7.75714 8.42357 7.97556 8.64198 8.22411 8.74324C8.51824 8.86306 8.84569 8.87338 9.14714 8.77339C9.40271 8.68861 9.63613 8.48471 10.1029 8.07632L14 4.66634" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="check-circle">
+        <g clip-path="url(#clip0_26_1381)">
+            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></circle>
+            <path d="M10 6.66699L7.33333 9.33366L6 8.00033" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_26_1381">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="check">
+        <path d="M4 8.00033L6.82843 10.8288L12.4847 5.17188" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="chevron-down">
+        <path d="M19 9L12.7071 15.2929C12.3166 15.6834 11.6834 15.6834 11.2929 15.2929L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="circle-help">
+        <path d="M6.09766 6.04908C6.21152 5.69822 6.4201 5.38597 6.70052 5.14632C6.98094 4.90667 7.32253 4.74919 7.68685 4.69139C8.05117 4.63358 8.42415 4.6776 8.76497 4.81868C9.1058 4.95977 9.40097 5.1925 9.61784 5.49089C9.83471 5.78927 9.96459 6.14171 9.99358 6.50944C10.0226 6.87717 9.94923 7.24586 9.78179 7.57454C9.61436 7.90323 9.35958 8.17899 9.04507 8.37174C8.73056 8.5645 8.36888 8.66651 8 8.66651V9.33349M8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8C14 11.3137 11.3137 14 8 14ZM8.0332 11.3333V11.4L7.9668 11.4001V11.3333H8.0332Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="clock">
+        <path d="M8 4.66667V8H11.3333M8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8C14 11.3137 11.3137 14 8 14Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="close-circle">
+        <g clip-path="url(#clip0_21_1662)">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
+            <path d="M14 10L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M10 10L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_21_1662">
+                <rect width="24" height="24" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="close">
+        <g clip-path="url(#clip0_21_1712)">
+            <path d="M4.66699 4.66699L11.3337 11.3337M4.66699 11.3337L11.3337 4.66699" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_21_1712">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="copy">
+        <g clip-path="url(#clip0_59_2552)">
+            <path d="M10.667 2H2.66699V10.6667" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M5.33301 4.66699H13.333V12.667C13.333 13.4034 12.7361 14.0003 11.9997 14.0003H6.66634C5.92996 14.0003 5.33301 13.4034 5.33301 12.667V4.66699Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_59_2552">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="eye">
+        <g clip-path="url(#clip0_14_994)">
+            <path d="M9.99967 7.99967C9.99967 9.10424 9.10424 9.99967 7.99967 9.99967C6.8951 9.99967 5.99967 9.10424 5.99967 7.99967C5.99967 6.8951 6.8951 5.99967 7.99967 5.99967C9.10424 5.99967 9.99967 6.8951 9.99967 7.99967Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M1.33301 7.99967C2.39977 5.2681 4.89036 3.33301 7.99967 3.33301C11.109 3.33301 13.5996 5.2681 14.6663 7.99967C13.5996 10.7312 11.109 12.6663 7.99967 12.6663C4.89036 12.6663 2.39977 10.7312 1.33301 7.99967Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_14_994">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="exit">
+        <g clip-path="url(#clip0_8_1057)">
+            <path d="M10 2.66699H3.33333V12.0003C3.33333 12.7367 3.93029 13.3337 4.66667 13.3337H10" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M10.6667 10L12.6667 8M12.6667 8L10.6667 6M12.6667 8H6" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_8_1057">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="flag">
+        <g clip-path="url(#clip0_27_1810)">
+            <path d="M5.33301 2L5.33301 3.33333M5.33301 14L5.33301 8.66667M5.33301 3.33333L13.333 3.33333L11.9997 6L13.333 8.66667L5.33301 8.66667M5.33301 3.33333L5.33301 8.66667" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_27_1810">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="file-document">
+        <g clip-path="url(#clip0_365_10598)">
+            <path d="M4.66634 14C3.92996 14 3.33301 13.403 3.33301 12.6667V2H9.33301L12.6663 5.33333V12.6667C12.6663 13.403 12.0694 14 11.333 14H4.66634Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M8.66699 2V6H12.667" stroke="currentColor" stroke-width="1.33333" stroke-linejoin="round"></path>
+            <path d="M6 8.66602H10" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M6 11.334H10" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_365_10598">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="filter">
+        <path d="M13.3337 3.73372C13.3337 3.36036 13.3334 3.17353 13.2607 3.03092C13.1968 2.90548 13.0952 2.80357 12.9698 2.73965C12.8272 2.66699 12.6401 2.66699 12.2667 2.66699H3.7334C3.36003 2.66699 3.17353 2.66699 3.03092 2.73965C2.90548 2.80357 2.80357 2.90548 2.73965 3.03092C2.66699 3.17353 2.66699 3.36036 2.66699 3.73372V4.22523C2.66699 4.38829 2.66699 4.46988 2.68541 4.54661C2.70174 4.61463 2.72875 4.67961 2.7653 4.73926C2.80651 4.80651 2.86426 4.86426 2.97949 4.97949L6.35465 8.35465C6.46995 8.46995 6.52728 8.52728 6.56851 8.59456C6.60506 8.65421 6.63243 8.71941 6.64876 8.78744C6.667 8.86338 6.66699 8.944 6.66699 9.10376V12.2743C6.66699 12.8458 6.66699 13.1317 6.78735 13.3038C6.89245 13.4541 7.0546 13.5543 7.236 13.5811C7.44375 13.6118 7.69947 13.4842 8.21061 13.2286L8.74395 12.9619C8.95799 12.8549 9.06475 12.8012 9.14294 12.7214C9.21208 12.6508 9.26498 12.566 9.2972 12.4726C9.33364 12.3669 9.33366 12.247 9.33366 12.0077V9.10872C9.33366 8.94566 9.33366 8.86416 9.35208 8.78744C9.36841 8.71941 9.39541 8.65421 9.43197 8.59456C9.47292 8.52773 9.5301 8.47055 9.64387 8.35678L9.64616 8.35465L13.0213 4.97949C13.1366 4.86419 13.1939 4.80654 13.2352 4.73926C13.2717 4.67961 13.2991 4.61463 13.3154 4.54661C13.3337 4.47067 13.3337 4.38995 13.3337 4.23019V3.73372Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="github">
+        <g clip-path="url(#clip0_15_942)">
+            <path d="M5.63813 14.3102C6.06354 14.3633 6.22307 14.0975 6.22307 13.8848C6.22307 13.6721 6.22307 13.1403 6.22307 12.3958C3.83015 12.9276 3.29839 11.226 3.29839 11.226C2.92616 10.2156 2.34123 9.94974 2.34123 9.94974C1.54359 9.41799 2.3944 9.41799 2.3944 9.41799C3.24522 9.47116 3.7238 10.322 3.7238 10.322C4.52144 11.6514 5.74449 11.2791 6.22307 11.0664C6.27625 10.4815 6.54212 10.1093 6.75483 9.89657C4.8405 9.68387 2.81981 8.9394 2.81981 5.58932C2.81981 4.63215 3.13887 3.88769 3.7238 3.24958C3.67062 3.09005 3.35157 2.18606 3.83015 1.01619C3.83015 1.01619 4.57462 0.803483 6.22307 1.92018C6.91436 1.70747 7.65882 1.6543 8.40328 1.6543C9.14775 1.6543 9.89221 1.76065 10.5835 1.92018C12.2319 0.803483 12.9764 1.01619 12.9764 1.01619C13.455 2.18606 13.1359 3.09005 13.0828 3.30275C13.6145 3.88769 13.9868 4.68533 13.9868 5.64249C13.9868 8.99258 11.9661 9.68387 10.0517 9.89657C10.3708 10.1624 10.6367 10.6942 10.6367 11.4918C10.6367 12.6617 10.6367 13.5657 10.6367 13.8848C10.6367 14.0975 10.7962 14.3633 11.2216 14.3102" stroke="currentColor" stroke-width="1.15634"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_15_942">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="globe">
+        <path d="M2 8H5.33333M2 8C2 11.3137 4.68629 14 8 14M2 8C2 4.68629 4.68629 2 8 2M5.33333 8H10.6667M5.33333 8C5.33333 11.3137 6.52724 14 8 14M5.33333 8C5.33333 4.68629 6.52724 2 8 2M10.6667 8H14M10.6667 8C10.6667 4.68629 9.47276 2 8 2M10.6667 8C10.6667 11.3137 9.47276 14 8 14M14 8C14 4.68629 11.3137 2 8 2M14 8C14 11.3137 11.3137 14 8 14" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-frame">
+        <path d="M2 4H14" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M12 2L12 14" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M2 12H14" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M4 2L4 14" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="graduation-cap">
+        <path d="M12.1053 6.01221V9.61899C12.1053 10.072 12.1053 10.2984 12.0177 10.4937C11.9889 10.5579 11.9535 10.6188 11.9119 10.6755C11.7854 10.8481 11.5885 10.96 11.1947 11.1839L8.88945 12.4941C8.50435 12.713 8.3118 12.8225 8.10319 12.8441C8.03458 12.8512 7.96543 12.8512 7.89682 12.8441C7.68821 12.8225 7.49566 12.713 7.11056 12.4941L4.80529 11.1839C4.41148 10.96 4.21458 10.8481 4.08811 10.6755C4.04654 10.6188 4.01107 10.5579 3.98229 10.4937C3.89474 10.2984 3.89474 10.072 3.89474 9.61898V6.0122M14 5.09491L8.75266 2.67947C8.4241 2.52823 8.25982 2.45261 8.08617 2.43759C8.02883 2.43263 7.97117 2.43263 7.91383 2.43759C7.74018 2.45261 7.5759 2.52823 7.24734 2.67947L2 5.09491L7.21566 7.61995C7.55746 7.78543 7.72837 7.86817 7.90995 7.88459C7.96987 7.89 8.03014 7.89 8.09006 7.88459C8.27164 7.86817 8.44255 7.78543 8.78435 7.61995L14 5.09491ZM14 5.09491V11.2663C14 11.6581 14 11.854 13.932 12.0288C13.9096 12.0865 13.8818 12.1419 13.8492 12.1945C13.7501 12.3538 13.5934 12.4713 13.28 12.7063L12.5 13.2913" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="grid">
+        <path d="M13.3337 6.22255V4.00033C13.3337 3.26395 12.7367 2.66699 12.0003 2.66699H9.7781M13.3337 6.22255H9.7781M13.3337 6.22255V9.7781M2.66699 6.22255V4.00033C2.66699 3.26395 3.26395 2.66699 4.00033 2.66699H6.22255M2.66699 6.22255H6.22255M2.66699 6.22255V9.7781M9.7781 6.22255H6.22255M9.7781 6.22255V2.66699M9.7781 6.22255V9.7781M6.22255 6.22255V2.66699M6.22255 6.22255V9.7781M13.3337 9.7781V12.0003C13.3337 12.7367 12.7367 13.3337 12.0003 13.3337H9.7781M13.3337 9.7781H9.7781M2.66699 9.7781V12.0003C2.66699 12.7367 3.26395 13.3337 4.00033 13.3337H6.22255M2.66699 9.7781H6.22255M9.7781 9.7781H6.22255M9.7781 9.7781V13.3337M6.22255 9.7781V13.3337M6.22255 2.66699H9.7781M6.22255 13.3337H9.7781" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="image">
+        <path d="M2.00003 11.3337C2 11.2907 2 11.2463 2 11.2005V4.80046C2 4.05372 2 3.68007 2.14532 3.39486C2.27316 3.14397 2.47698 2.94015 2.72786 2.81232C3.01308 2.66699 3.38673 2.66699 4.13346 2.66699H11.8668C12.6135 2.66699 12.9867 2.66699 13.2719 2.81232C13.5228 2.94015 13.727 3.14397 13.8548 3.39486C14 3.67979 14 4.05299 14 4.79827V11.2024C14 11.5257 14 11.7789 13.9881 11.9853M2.00003 11.3337C2.00055 11.9926 2.00891 12.3375 2.14532 12.6053C2.27316 12.8561 2.47698 13.0606 2.72786 13.1885C3.0128 13.3337 3.386 13.3337 4.13127 13.3337H11.8691C12.6143 13.3337 12.987 13.3337 13.2719 13.1885C13.5228 13.0606 13.727 12.8561 13.8548 12.6053C13.937 12.4439 13.9727 12.2545 13.9881 11.9853M2.00003 11.3337L5.17865 7.62533L5.17959 7.6243C5.46151 7.29539 5.60271 7.13066 5.77018 7.07129C5.91729 7.01913 6.07791 7.02035 6.22428 7.07454C6.39109 7.1363 6.53004 7.30291 6.80794 7.63639L8.58872 9.77333C8.84597 10.082 8.97534 10.2373 9.13242 10.2996C9.27097 10.3545 9.42377 10.3607 9.56673 10.3185C9.72947 10.2705 9.87272 10.1273 10.1592 9.84082L10.4906 9.50944C10.7822 9.21778 10.9281 9.07205 11.0931 9.02441C11.2381 8.98258 11.3931 8.99156 11.5326 9.04915C11.6913 9.11473 11.8201 9.27524 12.0778 9.59733L13.9881 11.9853M13.9881 11.9853L14 12.0001M10 6.66699C9.63181 6.66699 9.33333 6.36852 9.33333 6.00033C9.33333 5.63214 9.63181 5.33366 10 5.33366C10.3682 5.33366 10.6667 5.63214 10.6667 6.00033C10.6667 6.36852 10.3682 6.66699 10 6.66699Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="link-external">
+        <g clip-path="url(#clip0_26_1596)">
+            <path d="M7.33366 2.66699H2.66699V12.0003C2.66699 12.7367 3.26395 13.3337 4.00033 13.3337H12.0003C12.7367 13.3337 13.3337 12.7367 13.3337 12.0003V8.66699" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M6 10.0003L13.3333 2.66699" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M10 2.66699H13.3333V6.00033" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_26_1596">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" id="logo">
+        <path d="M26.7266 1.75609C28.5778 2.49191 30.3494 3.41603 32.0174 4.51435C32.2932 4.68177 32.5191 4.9202 32.6727 5.20529C32.8282 5.49038 32.9041 5.81192 32.8967 6.13712V18.2735C32.8653 22.1904 31.4268 25.9614 28.8518 28.8789C26.5137 31.5428 23.6498 33.679 20.4472 35.1494C19.8622 35.4497 19.2568 35.7063 18.6367 35.9171C18.2738 36.0276 17.8869 36.0276 17.5259 35.9171C12.946 33.9679 8.94175 31.2694 6.01124 27.0723C4.18037 24.4974 3.19921 21.4019 3.20662 18.2275C3.20662 14.2556 3.20661 10.3343 3.16589 6.36238C3.13256 5.97355 3.21031 5.58318 3.39173 5.23876C3.5713 4.89433 3.84715 4.61072 4.18407 4.4224C7.47372 2.27174 11.1688 0.842149 15.0341 0.225258L15.038 0.22477C15.766 0.133006 16.4571 0.0458896 17.1224 0H19.0384C19.6141 0.0919418 20.2343 0.133316 20.8156 0.225258C22.8371 0.505935 24.8198 1.01953 26.7266 1.75609Z" fill="currentColor"></path>
+        <path d="M16.1649 16.0253V16.0897C17.5237 16.4988 18.1716 17.7171 18.1716 19.5099C18.1716 22.1992 17.3293 23.7853 14.4377 23.7853H10.4482V9.00098H13.9952C16.6258 9.00098 17.7088 10.5686 17.7088 12.8901C17.7088 14.5819 17.2478 15.5564 16.1649 16.0253ZM12.8752 15.2117H14.0989C15.1226 15.2117 15.404 14.6003 15.404 13.1752C15.404 11.75 15.0597 11.3041 14.0989 11.3041H12.8752V15.2117ZM12.8752 21.5235H14.3395C15.3225 21.5235 15.6983 21.0638 15.6983 19.3444C15.6983 17.6252 15.317 17.2252 14.3395 17.2252H12.8567L12.8752 21.5235Z" fill="white"></path>
+        <path d="M26.2929 12.0766L24.4824 12.7707C24.201 11.4881 23.6623 10.9779 22.8552 10.9779C21.9721 10.9779 21.55 11.5065 21.55 12.4857C21.55 15.152 26.3892 15.437 26.3892 19.841C26.3892 22.489 24.9841 23.9785 22.7385 23.9785C20.8892 23.9785 19.3267 22.7189 18.9639 20.4387L20.9299 19.8273C21.2113 21.2936 21.9129 21.8223 22.6737 21.8223C23.5808 21.8223 24.0326 21.3121 24.0326 20.2318C24.0326 17.1196 19.1009 17.0138 19.1009 12.6788C19.1009 10.5043 20.4041 8.81261 22.6108 8.81261C24.649 8.79884 25.7912 10.0814 26.2929 12.0766Z" fill="white"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="mobile-button">
+        <path d="M4.66699 4.13346V11.8668C4.66699 12.6135 4.66699 12.9867 4.81232 13.2719C4.94015 13.5228 5.14397 13.727 5.39486 13.8548C5.67979 14 6.05299 14 6.79827 14H9.20239C9.94766 14 10.3203 14 10.6053 13.8548C10.8561 13.727 11.0606 13.5228 11.1885 13.2719C11.3337 12.987 11.3337 12.6143 11.3337 11.8691V4.13127C11.3337 3.386 11.3337 3.0128 11.1885 2.72786C11.0606 2.47698 10.8561 2.27316 10.6053 2.14532C10.32 2 9.94719 2 9.20046 2H6.80046C6.05372 2 5.68007 2 5.39486 2.14532C5.14397 2.27316 4.94015 2.47698 4.81232 2.72786C4.66699 3.01308 4.66699 3.38673 4.66699 4.13346Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="lightning">
+        <g clip-path="url(#clip0_25_1445)">
+            <path d="M7.33333 9.33301H4L6.33333 1.33301H10.6667L8.66667 6.66634H12L6.66667 14.6663L7.33333 9.33301Z" stroke="currentColor" stroke-width="1.33333" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_25_1445">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="moon">
+        <path d="M6 3.99967C6 7.31338 8.68629 9.99967 12 9.99967C12.6062 9.99967 13.1913 9.91002 13.7429 9.74284C12.9962 12.2065 10.7075 13.9996 8 13.9996C4.68629 13.9996 2 11.3135 2 7.99977C2 5.29223 3.79338 3.00356 6.25707 2.25684C6.08989 2.80842 6 3.3935 6 3.99967Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="mail-open">
+        <path d="M2.66667 6.66699L6.73842 9.74179L6.73978 9.74292C7.1919 10.0745 7.41809 10.2403 7.66584 10.3044C7.88482 10.3611 8.115 10.3611 8.33398 10.3044C8.58195 10.2403 8.80881 10.0739 9.26172 9.74179L13.3333 6.66699M13.2001 6.02662L9.46745 3.03804C9.00398 2.66696 8.77205 2.48148 8.51432 2.40783C8.28692 2.34284 8.04613 2.3394 7.81702 2.39806C7.55735 2.46455 7.32058 2.64348 6.84701 3.00158L2.84635 6.02677C2.53587 6.26155 2.38082 6.37902 2.26888 6.52739C2.16973 6.65881 2.09585 6.80743 2.05083 6.96577C2 7.14455 2 7.33921 2 7.72847V11.867C2 12.6138 2 12.9873 2.14532 13.2726C2.27316 13.5234 2.47698 13.7273 2.72786 13.8551C3.0128 14.0003 3.386 14.0003 4.13127 14.0003H11.8687C12.614 14.0003 12.9867 14.0003 13.2716 13.8551C13.5225 13.7273 13.727 13.5233 13.8548 13.2724C14 12.9875 14 12.6146 14 11.8693V7.68464C14 7.31321 14 7.12634 13.9525 6.95373C13.9101 6.7998 13.8397 6.65474 13.746 6.52544C13.6403 6.3795 13.4939 6.26184 13.2001 6.02662Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="notebook">
+        <path d="M5.33366 2.66699H4.80046C4.05372 2.66699 3.68007 2.66699 3.39486 2.81232C3.14397 2.94015 2.94015 3.14397 2.81232 3.39486C2.66699 3.68007 2.66699 4.05372 2.66699 4.80046V11.2005C2.66699 11.9472 2.66699 12.3204 2.81232 12.6056C2.94015 12.8565 3.14397 13.0606 3.39486 13.1885C3.67979 13.3337 4.05299 13.3337 4.79827 13.3337H5.33366M5.33366 2.66699H11.2005C11.9472 2.66699 12.32 2.66699 12.6053 2.81232C12.8561 2.94015 13.0606 3.14397 13.1885 3.39486C13.3337 3.67979 13.3337 4.05299 13.3337 4.79827V11.2027C13.3337 11.948 13.3337 12.3206 13.1885 12.6056C13.0606 12.8565 12.8561 13.0606 12.6053 13.1885C12.3203 13.3337 11.9477 13.3337 11.2024 13.3337H5.33366M5.33366 2.66699V13.3337M8.00033 7.33366H10.667M8.00033 5.33366H10.667" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="plus">
+        <path d="M11.771 8H7.99976M7.99976 8H4.22852M7.99976 8V4.22875M7.99976 8V11.7712" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="paper-plane">
+        <path d="M6.87152 9.12791L10.1023 5.89714M13.4072 3.92546L10.6801 12.7885C10.4357 13.5828 10.3134 13.9801 10.1026 14.1118C9.9198 14.2261 9.69343 14.2452 9.4943 14.1626C9.26469 14.0673 9.07833 13.6952 8.70657 12.9517L6.97926 9.49707C6.92027 9.37908 6.89074 9.32033 6.85133 9.26921C6.81637 9.22384 6.77601 9.18297 6.73064 9.148C6.68068 9.10949 6.62292 9.08061 6.51019 9.02425L3.04762 7.29297C2.30409 6.9212 1.93228 6.73515 1.83701 6.50554C1.75439 6.30641 1.77323 6.07983 1.88747 5.89699C2.01919 5.68617 2.4165 5.56369 3.21104 5.31922L12.0741 2.59212C12.6987 2.39993 13.0112 2.3039 13.2222 2.38136C13.4059 2.44883 13.5508 2.59357 13.6183 2.77735C13.6957 2.98823 13.5996 3.30052 13.4076 3.92453L13.4072 3.92546Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="printer">
+        <path d="M4.66699 4.66699C4.66699 3.56242 5.56242 2.66699 6.66699 2.66699H9.33366C10.4382 2.66699 11.3337 3.56242 11.3337 4.66699V5.33366H4.66699V4.66699Z" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M4.66699 9.33301H11.3337V11.333C11.3337 12.4376 10.4382 13.333 9.33366 13.333H6.66699C5.56242 13.333 4.66699 12.4376 4.66699 11.333V9.33301Z" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M12 11.333H14V7.33301C14 6.22844 13.1046 5.33301 12 5.33301H4C2.89543 5.33301 2 6.22844 2 7.33301V11.333H4" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M12.0003 7.33301L10.667 7.33301" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="refresh">
+        <g clip-path="url(#clip0_8_876)">
+            <path d="M12.5713 10.2853L14.857 9.71387L15.4284 11.9996" stroke="currentColor" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M14.8566 9.71387C14.349 11.1523 13.4269 12.4082 12.2066 13.3235C10.9863 14.2387 9.52243 14.7722 7.99942 14.8567C6.59156 14.857 5.21773 14.4239 4.06455 13.6162C2.91137 12.8086 2.03473 11.6656 1.55371 10.3424" stroke="currentColor" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3.42843 5.71429L1.14272 6.28571L0.571289 4" stroke="currentColor" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M1.14258 6.28543C2.10258 3.65686 5.05115 1.14258 7.99972 1.14258C9.41445 1.14655 10.7933 1.58801 11.9473 2.40644C13.1013 3.22486 13.9739 4.38018 14.4454 5.71401" stroke="currentColor" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_8_876">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="reload">
+        <g clip-path="url(#clip0_8_1014)">
+            <path d="M8 2C11.3137 2 14 4.68629 14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 6.11516 2.86911 4.4333 4.22844 3.33333" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2 3H4.66667V5.66667" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_8_1014">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="puzzle">
+        <path d="M13.3333 4.66667H11.8991C11.5674 4.66667 11.3333 4.33167 11.3333 4C11.3333 2.89543 10.4379 2 9.33333 2C8.22876 2 7.33333 2.89543 7.33333 4C7.33333 4.33167 7.09923 4.66667 6.76756 4.66667H5.33333C4.96514 4.66667 4.66667 4.96514 4.66667 5.33333V6.76756C4.66667 7.09923 4.33167 7.33333 4 7.33333C2.89543 7.33333 2 8.22876 2 9.33333C2 10.4379 2.89543 11.3333 4 11.3333C4.33167 11.3333 4.66667 11.5674 4.66667 11.8991V13.3333C4.66667 13.7015 4.96514 14 5.33333 14L13.3333 14C13.7015 14 14 13.7015 14 13.3333V11.8991C14 11.5674 13.665 11.3333 13.3333 11.3333C12.2288 11.3333 11.3333 10.4379 11.3333 9.33333C11.3333 8.22876 12.2288 7.33333 13.3333 7.33333C13.665 7.33333 14 7.09923 14 6.76756L14 5.33333C14 4.96514 13.7015 4.66667 13.3333 4.66667Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="search">
+        <g clip-path="url(#clip0_5_1354)">
+            <path d="M14 14L11.1046 11.1046M11.1046 11.1046C12.0697 10.1394 12.6667 8.80609 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667C8.80609 12.6667 10.1394 12.0697 11.1046 11.1046Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_5_1354">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="settings">
+        <g clip-path="url(#clip0_15_989)">
+            <rect x="6.01823" y="6.30827" width="3.96305" height="3.96305" rx="1.98153" stroke="currentColor" stroke-width="1.33333"></rect>
+            <path d="M9.74219 2.89355C9.8748 2.67065 10.1504 2.60826 10.3477 2.72559L10.3574 2.73145L11.5098 3.39062H11.5107C11.7592 3.53272 11.8656 3.83419 11.7793 4.0957L11.7305 4.2041C11.3563 4.84986 11.2381 5.59067 11.5967 6.21289C11.9553 6.83503 12.6554 7.10352 13.4004 7.10352C13.7274 7.10356 14 7.37397 14 7.70312V8.87598C13.9999 9.20297 13.7295 9.47554 13.4004 9.47559C12.6553 9.47559 11.9553 9.74397 11.5967 10.3662C11.2388 10.9873 11.356 11.7262 11.7285 12.3711V12.3721C11.894 12.662 11.7935 13.0256 11.5107 13.1875L11.5098 13.1885L10.3574 13.8477L10.3477 13.8535C10.1751 13.9562 9.94214 13.9214 9.79785 13.7617L9.74219 13.6855L9.67285 13.5664C9.30184 12.9204 8.71993 12.4482 8.00195 12.4482C7.28447 12.4483 6.7013 12.9201 6.32715 13.5654L6.32617 13.5664L6.25684 13.6855C6.12429 13.9082 5.8495 13.9705 5.65234 13.8535L5.64258 13.8477L4.48926 13.1885V13.1875C4.20523 13.0252 4.10695 12.6554 4.26953 12.374L4.26855 12.373C4.64217 11.7276 4.76069 10.9881 4.40234 10.3662C4.04373 9.74407 3.34363 9.47559 2.59863 9.47559C2.26969 9.47536 2.00008 9.20286 2 8.87598V7.70312C2 7.37618 2.26964 7.10374 2.59863 7.10352C3.34358 7.10352 4.0437 6.83493 4.40234 6.21289C4.76094 5.59062 4.64277 4.84989 4.26855 4.2041H4.26953C4.12729 3.95782 4.18457 3.64424 4.3916 3.46094L4.48926 3.39062L5.64258 2.73145L5.65234 2.72559C5.82489 2.62313 6.05696 2.65782 6.20117 2.81738L6.25684 2.89355L6.32617 3.0127C6.69716 3.6587 7.27915 4.12984 7.99707 4.12988C8.71471 4.12988 9.29866 3.65914 9.67285 3.01367V3.0127L9.74219 2.89355Z" stroke="currentColor" stroke-width="1.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_15_989">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="share">
+        <g clip-path="url(#clip0_14_1029)">
+            <path d="M10.8484 4.00527C11.0797 4.4009 11.509 4.66667 12.0003 4.66667C12.7367 4.66667 13.3337 4.06971 13.3337 3.33333C13.3337 2.59695 12.7367 2 12.0003 2C11.2639 2 10.667 2.59695 10.667 3.33333C10.667 3.57837 10.7331 3.80797 10.8484 4.00527ZM10.8484 4.00527L5.15222 7.32806M5.15222 7.32806C4.92094 6.93244 4.49167 6.66667 4.00033 6.66667C3.26395 6.66667 2.66699 7.26362 2.66699 8C2.66699 8.73638 3.26395 9.33333 4.00033 9.33333C4.49167 9.33333 4.92094 9.06756 5.15222 8.67194M5.15222 7.32806C5.26756 7.52537 5.33366 7.75496 5.33366 8C5.33366 8.24504 5.26756 8.47464 5.15222 8.67194M5.15222 8.67194L10.8484 11.9947M10.8484 11.9947C11.0797 11.5991 11.509 11.3333 12.0003 11.3333C12.7367 11.3333 13.3337 11.9303 13.3337 12.6667C13.3337 13.403 12.7367 14 12.0003 14C11.2639 14 10.667 13.403 10.667 12.6667C10.667 12.4216 10.7331 12.192 10.8484 11.9947Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_14_1029">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="shield-check">
+        <path d="M10.0003 6L7.33366 8.66667L6.00033 7.33333M13.3337 6.7767C13.3337 11.1555 10.0216 13.1187 8.61751 13.7543L8.61574 13.755C8.46807 13.8219 8.39405 13.8554 8.22624 13.8842C8.11997 13.9024 7.88135 13.9024 7.77508 13.8842C7.60661 13.8553 7.53181 13.8216 7.38296 13.7543C5.97886 13.1187 2.66699 11.1555 2.66699 6.77669V4.13346C2.66699 3.38673 2.66699 3.01308 2.81232 2.72786C2.94015 2.47698 3.14397 2.27316 3.39486 2.14532C3.68007 2 4.05372 2 4.80046 2H11.2005C11.9472 2 12.32 2 12.6053 2.14532C12.8561 2.27316 13.0606 2.47698 13.1885 2.72786C13.3337 3.0128 13.3337 3.386 13.3337 4.13127V6.7767Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="star-filled">
+        <path d="M7.3658 3.28438C7.56537 2.67017 8.43431 2.67017 8.63387 3.28437L9.4966 5.93956C9.58585 6.21424 9.84182 6.40022 10.1306 6.40022H12.9225C13.5683 6.40022 13.8368 7.22663 13.3143 7.60623L11.0557 9.24722C10.822 9.41699 10.7243 9.7179 10.8135 9.99258L11.6762 12.6478C11.8758 13.262 11.1728 13.7727 10.6503 13.3931L8.39169 11.7521C8.15804 11.5824 7.84164 11.5824 7.60798 11.7521L5.34935 13.3931C4.82687 13.7727 4.12388 13.262 4.32345 12.6478L5.18617 9.99258C5.27542 9.7179 5.17765 9.41699 4.94399 9.24722L2.68536 7.60623C2.16288 7.22663 2.4314 6.40022 3.07721 6.40022H5.86904C6.15786 6.40022 6.41383 6.21424 6.50308 5.93956L7.3658 3.28438Z" fill="currentColor"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="shield-warning">
+        <path d="M8.00033 5.33333V8M13.3337 6.7767C13.3337 11.1555 10.0216 13.1187 8.61751 13.7543L8.61574 13.755C8.46807 13.8219 8.39405 13.8554 8.22624 13.8842C8.11997 13.9024 7.88135 13.9024 7.77508 13.8842C7.60661 13.8553 7.53181 13.8216 7.38296 13.7543C5.97886 13.1187 2.66699 11.1555 2.66699 6.77669V4.13346C2.66699 3.38673 2.66699 3.01308 2.81232 2.72786C2.94015 2.47698 3.14397 2.27316 3.39486 2.14532C3.68007 2 4.05372 2 4.80046 2H11.2005C11.9472 2 12.32 2 12.6053 2.14532C12.8561 2.27316 13.0606 2.47698 13.1885 2.72786C13.3337 3.0128 13.3337 3.386 13.3337 4.13127V6.7767ZM8.03353 10V10.0667L7.96712 10.0668V10H8.03353Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="star-outline">
+        <path d="M7.36629 3.28438C7.56586 2.67017 8.4348 2.67017 8.63436 3.28437L9.49709 5.93956C9.58634 6.21424 9.84231 6.40022 10.1311 6.40022H12.923C13.5688 6.40022 13.8373 7.22663 13.3148 7.60623L11.0562 9.24722C10.8225 9.41699 10.7247 9.7179 10.814 9.99258L11.6767 12.6478C11.8763 13.262 11.1733 13.7727 10.6508 13.3931L8.39218 11.7521C8.15852 11.5824 7.84213 11.5824 7.60847 11.7521L5.34983 13.3931C4.82736 13.7727 4.12437 13.262 4.32394 12.6478L5.18666 9.99258C5.27591 9.7179 5.17814 9.41699 4.94448 9.24722L2.68584 7.60623C2.16337 7.22663 2.43188 6.40022 3.0777 6.40022H5.86953C6.15834 6.40022 6.41432 6.21424 6.50357 5.93956L7.36629 3.28438Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="trash">
+        <path d="M5.33301 4.0946L5.33301 2.98028C5.33301 2.20375 5.33301 1.81548 5.56595 1.57424C5.7989 1.33301 6.17381 1.33301 6.92365 1.33301L9.0757 1.33301C9.82553 1.33301 10.2005 1.33301 10.4334 1.57424C10.6663 1.81548 10.6663 2.20375 10.6663 2.98028V4.0946" stroke="currentColor" stroke-width="1.33333"></path>
+        <path d="M9.33301 7.47656V10.8099" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round"></path>
+        <path d="M6.66699 7.47656V10.8099" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round"></path>
+        <path d="M8 14C7.09593 14 6.46784 13.9997 5.98145 13.9502C5.50747 13.902 5.2365 13.8122 5.0293 13.6777C4.85597 13.5652 4.70115 13.4265 4.57031 13.2666C4.41399 13.0754 4.29525 12.8162 4.19531 12.3506C4.09275 11.8726 4.02307 11.2481 3.92383 10.3496L3.25488 4.28711L12.7451 4.28711L12.0762 10.3496C11.9769 11.2481 11.9072 11.8726 11.8047 12.3506C11.7048 12.8162 11.586 13.0754 11.4297 13.2666C11.2988 13.4265 11.144 13.5652 10.9707 13.6777C10.7635 13.8122 10.4925 13.902 10.0186 13.9502C9.53216 13.9997 8.90405 14 8 14Z" stroke="currentColor" stroke-width="1.33333"></path>
+        <path d="M2 4.08105H14" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="sun">
+        <g clip-path="url(#clip0_8_965)">
+            <path d="M8.00033 0.666992V2.00033M8.00033 14.0003V15.3337M15.3337 8.00033H14.0003M2.00033 8.00033H0.666992M13.1858 2.81488L12.243 3.75768M3.75768 12.243L2.81488 13.1858M13.1858 13.1858L12.243 12.243M3.75769 3.75768L2.81488 2.81488M12.0003 8.00033C12.0003 10.2095 10.2095 12.0003 8.00033 12.0003C5.79119 12.0003 4.00033 10.2095 4.00033 8.00033C4.00033 5.79119 5.79119 4.00033 8.00033 4.00033C10.2095 4.00033 12.0003 5.79119 12.0003 8.00033Z" stroke="currentColor" stroke-width="1.33" stroke-linecap="round"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_8_965">
+                <rect width="16" height="16" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="trending-down">
+        <path d="M13.334 11.3337L9.43652 7.37533C9.36652 7.30423 9.33114 7.2686 9.2998 7.24056C8.79356 6.78744 8.02805 6.78744 7.52181 7.24056C7.49047 7.26861 7.45482 7.30419 7.38478 7.37533C7.31475 7.44645 7.27971 7.48203 7.24837 7.51008C6.74213 7.9632 5.9763 7.9632 5.47006 7.51008C5.43872 7.48203 5.4037 7.44646 5.33366 7.37533L2.66699 4.66699M13.334 11.3337L13.3337 7.33366M13.334 11.3337H9.33366" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+</svg>
+	</body>
+</html>
