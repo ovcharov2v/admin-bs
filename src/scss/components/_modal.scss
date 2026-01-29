@@ -35,7 +35,7 @@
 	padding: 24px;
 	border-radius: 8px;
 	background-color: $color-bg2;
-	box-shadow: 0 1px 4px #C1C2CB, 0 24px 48px rgba(#C1C4D4, .5);
+	box-shadow: $shadow;
 	transition: opacity $transition-default, transform $transition-default;
 	
 	.modal--info & {
