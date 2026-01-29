@@ -71,6 +71,7 @@
   }
   
   &__profile {
+	position: relative;
 	display: flex;
 	align-items: center;
 	gap: 8px;
@@ -132,5 +133,98 @@
 	display: block;
 	width: 16px;
 	height: 16px;
+	transition: transform $transition-default;
+ 
+	.header__profile--active & {
+	  transform: rotate(180deg);
+	}
+  }
+  
+  &__account {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	padding: 32px;
+	background-color: $color-bg2;
+	border-radius: 8px;
+	box-shadow: $shadow;
+ 
+	.header__profile--active & {
+	  display: block;
+	}
+  }
+  
+  &__account-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	transition: color $transition-default;
+	
+	&:hover {
+	  color: $color-text2;
+	}
+  }
+  
+  &__account-close-icon {
+	display: block;
+	width: 20px;
+	height: 20px;
+  }
+  
+  &__account-content {
+	text-align: center;
+  }
+  
+  &__account-email {
+	margin-bottom: 30px;
+	font-size: 12px;
+	line-height: 1.2;
+	font-weight: 600;
+  }
+  
+  &__account-logo {
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto 24px;
+	object-fit: cover;
+	border-radius: 50%;
+  }
+  
+  &__account-data {
+	margin-bottom: 24px;
+  }
+  
+  &__account-company {
+	margin-bottom: 8px;
+	font-size: 17px;
+	line-height: 1;
+	font-weight: 600;
+  }
+  
+  &__account-name {
+	font-size: 12px;
+	line-height: 1.2;
+	font-weight: 600;
+  }
+  
+  &__account-bottom {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+  }
+  
+  &__account-btn-row {
+	display: flex;
+	gap: 16px;
   }
 }

@@ -1,0 +1,127 @@
+.lk {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-top: 108px;
+  padding-bottom: 50px;
+  padding-left: 253px;
+  
+  &__container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+  }
+  
+  &__panel {
+	width: 100%;
+	max-width: 634px;
+	margin: 0 auto;
+	padding: 32px;
+	background-color: $color-bg2;
+	border-radius: 8px;
+	box-shadow: $shadow;
+	
+	&--center {
+	  margin: auto
+	}
+  }
+  
+  &__title-box {
+	margin-bottom: 24px;
+	text-align: center;
+  }
+  
+  &__title {
+	margin-bottom: 12px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
+  }
+  
+  &__description {
+	font-size: 14px;
+	line-height: 1;
+	color: $color-text2;
+  }
+  
+  &__logo {
+	display: block;
+	width: 160px;
+	height: 160px;
+	margin: 0 auto 24px;
+	border-radius: 50%;
+	object-fit: cover;
+  }
+  
+  &__action-row {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	margin-bottom: 24px;
+  }
+  
+  &__action-btn {
+	min-width: 110px;
+  }
+  
+  &__form {
+  }
+  
+  &__input-box {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	margin-bottom: 24px;
+	padding: 24px 0;
+	border: solid $color-border;
+	border-width: 1px 0 1px 0;
+  }
+  
+  &__input-grid {
+	display: grid;
+	grid-template: auto / repeat(2, minmax(0,1fr));
+	grid-gap: 24px;
+  }
+  
+  &__form-submit-box {
+	display: flex;
+	justify-content: center;
+  }
+  
+  &__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 24px;
+	margin-bottom: 24px;
+  }
+  
+  &__header-title {
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
+  }
+  
+  &__close {
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	transition: color $transition-default;
+	
+	&:hover {
+	  color: $color-text2;
+	}
+  }
+  
+  &__close-icon {
+	display: block;
+	width: 24px;
+	height: 24px;
+  }
+}

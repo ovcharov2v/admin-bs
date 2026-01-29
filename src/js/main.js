@@ -1,4 +1,5 @@
 import './components/theme-switcher'
+import './components/header'
 import './components/select'
 import './components/modal'
 import './components/filter'

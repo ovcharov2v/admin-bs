@@ -94,7 +94,8 @@
 	color: #4259E9;
   }
   
-  &--outline-blue {
+  &--outline-blue,
+  &--outline-blue2 {
 	border-color: #4259E9;
 	color: #4259E9;
 	
@@ -104,6 +105,10 @@
 	  background-color: #4259E9;
 	  color: #fff;
 	}
+  }
+  
+  &--outline-blue2 {
+	background-color: $color-bg1;
   }
   
   &--blue {

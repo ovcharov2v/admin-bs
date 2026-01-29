@@ -28,3 +28,20 @@ mixin header()
 						+svg("user").header__profile-icon
 					button.header__profile-btn(aria-label="Профиль")
 						+svg("chevron-down").header__profile-btn-icon
+					.header__account
+						button.header__account-close(type="button", aria-label="Закрыть")
+							+svg("close").header__account-close-icon
+						.header__account-content
+							p.header__account-email Mvidio@client.brandsecurity.ru
+							img.header__account-logo(src="/images/client.png", alt="")
+							.header__account-data
+								p.header__account-company М-Видео
+								p.header__account-name Роман Андерсон
+						.header__account-bottom
+							.header__account-btn-row
+								button.button.button--outline-blue.button--round(type="button") Cменить пароль
+								button.button.button--outline-blue.button--round(type="button") Мой профиль
+							button.button.button--outline-blue2.button--round(type="button")
+								+svg("exit").button__icon
+								| Выйти
+

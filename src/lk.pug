@@ -1,0 +1,53 @@
+extends pug/cp
+
+block content
+    .lk
+        .container.lk__container
+            .lk__panel
+                .lk__title-box
+                    p.lk__title Мой профиль
+                    p.lk__description Заполните профиль компании
+                img.lk__logo(src="/images/client.png", alt="")
+                .lk__action-row
+                    button.button.button--outline-blue.button--round.lk__action-btn(type="button") Сменить
+                    button.button.button--outline-blue.button--round.lk__action-btn(type="button") Удалить
+                form.lk__form
+                    .lk__input-box
+                        // group
+                        .form-group
+                            .form-group__title-box
+                                p.form-group__title Название компании
+                            .form-group__input-box
+                                button.form-group__action-btn(aria-label="Очистить")
+                                    +svg("close").form-group__action-icon
+                                input.form-group__input(type="text", value="М-видео")
+                            span.form-group__note пояснительный текст
+                        .lk__input-grid
+                            // group
+                            .form-group
+                                .form-group__title-box
+                                    p.form-group__title Имя
+                                .form-group__input-box
+                                    button.form-group__action-btn(aria-label="Очистить")
+                                        +svg("close").form-group__action-icon
+                                    input.form-group__input(type="text", value="Иван")
+                                span.form-group__note пояснительный текст
+                            // group
+                            .form-group
+                                .form-group__title-box
+                                    p.form-group__title Фамилия
+                                .form-group__input-box
+                                    button.form-group__action-btn(aria-label="Очистить")
+                                        +svg("close").form-group__action-icon
+                                    input.form-group__input(type="text", value="Иванов")
+                                span.form-group__note пояснительный текст
+                            // group
+                            .form-group
+                                .form-group__title-box
+                                    p.form-group__title Язык
+                                .form-group__input-box
+                                    select.form-group__input
+                                        option Русский
+                                        option English
+                    .lk__form-submit-box
+                        button.button.button--blue.button--round(type="submit") Сохранить изменения
