@@ -40,7 +40,10 @@ mixin filter2()
                             label.form-group__radio
                                 input.form-group__radio-input(type="radio", name="priority")
                                 span.form-group__radio-text За Август
-                            input.form-group__input.form-group__input--sm(type="date")
+                            .form-group__input-box
+                                input.form-group__input.form-group__input--sm(type="date")
+                                button.form-group__action-btn.form-group__action-btn--calendar(aria-label="Календарь", type="button")
+                                    +svg("calendar").form-group__action-icon
                     // group
                     .form-group.filter__row-group.filter__row-group--search
                         .form-group__title-box

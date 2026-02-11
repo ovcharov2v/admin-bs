@@ -73,8 +73,22 @@
 	transition: border-color $transition-default;
 	resize: none;
 	
-	&::placeholder {
+	&::placeholder, &:empty {
 	  color: $color-text2;
+	}
+	
+	&[type="date"] {
+	  -moz-appearance: textfield;
+	  &::-webkit-calendar-picker-indicator {
+		opacity: 0;
+		cursor: pointer;
+	  }
+	  &::-moz-calendar-picker-indicator {
+		display: none;
+	  }
+	  &::-ms-clear {
+		display: none;
+	  }
 	}
 	
 	&:hover {
@@ -122,6 +136,10 @@
 	
 	&:hover {
 	  color: $color-text1;
+	}
+	
+	&--calendar {
+	  pointer-events: none;
 	}
 	
 	.form-group--complete & {

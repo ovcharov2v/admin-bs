@@ -47,14 +47,20 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transform: translateY(1px);
 	width: 14px;
 	height: 14px;
 	margin-left: 2px;
 	padding: 0;
 	border: none;
 	border-radius: 50%;
+	background-color: transparent;
 	transition: background-color $transition-default, color $transition-default;
 	color: inherit;
+	
+	&:hover {
+	  color: $color-text1;
+	}
   }
   
   &__close-icon {
@@ -88,15 +94,6 @@
 	&--dark-violet {
 	  background-color: #C2BAF9;
 	}
- 
-	&__close {
-	  background-color: rgba(#fff, .3);
-	
-	  &:hover {
-		background-color: #fff;
-		color: $color-text1;
-	  }
-	}
   }
 }
 
@@ -123,15 +120,6 @@
 	&--dark-violet {
 	  background-color: #393459;
 	  color: #856CEF;
-	}
- 
-	&__close {
-	  background-color: rgba(#fff, .05);
-	
-	  &:hover {
-		background-color: transparent;
-		color: $color-text1;
-	  }
 	}
   }
 }

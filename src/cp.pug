@@ -102,7 +102,10 @@ block content
                     .data-card__top
                         p.data-card__title График нарушений
                         .data-card__nav
-                            input.form-group__input.form-group__input--transparent.form-group__input--sm(type="date")
+                            .form-group__input-box
+                                input.form-group__input.form-group__input--transparent.form-group__input--sm(type="date")
+                                button.form-group__action-btn.form-group__action-btn--calendar(aria-label="Календарь", type="button")
+                                    +svg("calendar").form-group__action-icon
                             button.button.button--outline-hover-blue.button--icon.button--sm.data-card__btn
                                 +svg("arrow-move-hor").button__icon
                     .data-card__content-box
