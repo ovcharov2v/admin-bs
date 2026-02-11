@@ -25,6 +25,7 @@ html(class=""+baseTheme)
 			block content
 		block scripts
 			//-script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
+			script(src=`./lib/popper.min.js`)
 			script(src=`./lib/tippy-bundle.iife.min.js`)
 			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
 		include ../images/sprite/sprite.svg
