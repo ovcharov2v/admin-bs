@@ -235,9 +235,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   var backBtn = document.querySelector('.modal-help__back-btn');
-  backBtn.addEventListener('click', function () {
-    return modalHelp.classList.remove('modal-help--slide-show');
-  });
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      return modalHelp.classList.remove('modal-help--slide-show');
+    });
+  }
 });
 
 /***/ }),
