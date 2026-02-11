@@ -11,6 +11,10 @@
   }
   
   &__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 24px;
   }
   
   &__title {
@@ -34,6 +38,12 @@
 	font-size: 14px;
 	line-height: 1;
 	color: $color-text2;
+  }
+  
+  &__header-select-box {
+	display: grid;
+	grid-template: auto / repeat(2, minmax(0,1fr));
+	grid-gap: 12px;
   }
   
   &__info-card-grid {

@@ -4,10 +4,24 @@ block content
     .page
         .container.page__container
             .page__header
-                h1.page__title
-                    +svg("shield-warning").page__title-icon
-                    | Панель управления
-                p.page__description Централизованный просмотр всех угроз
+                .page__title-box
+                    h1.page__title
+                        +svg("shield-warning").page__title-icon
+                        | Панель управления
+                    p.page__description Централизованный просмотр всех угроз
+                .page__header-select-box
+                    .form-group__input-box
+                        select.form-group__input.form-group__input--main-bg
+                            option Значение 1
+                            option Значение 2
+                            option Значение 3
+                            option Значение 4
+                    .form-group__input-box
+                        select.form-group__input.form-group__input--main-bg
+                            option Значение 1
+                            option Значение 2
+                            option Значение 3
+                            option Значение 4
             // grid
             .page__info-card-grid
                 // card

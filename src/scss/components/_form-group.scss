@@ -109,6 +109,10 @@
 	&--transparent {
 	  background-color: transparent !important;
 	}
+ 
+	&--main-bg {
+	  background-color: $color-bg2 !important;
+	}
 	
 	.form-group--action & {
 	  padding-right: 32px;
