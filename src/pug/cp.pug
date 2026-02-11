@@ -17,7 +17,7 @@ html(class=""+baseTheme)
 			link(rel='icon' type='image/png' href='favicon-32x32.png' sizes='32x32')
 			link(rel='icon' type='image/png' href='favicon-16x16.png' sizes='16x16')
 		block styles
-			link(rel="stylesheet" href=`/lib/tippy.css`)
+			link(rel="stylesheet" href=`./lib/tippy.css`)
 			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
 		block head-end
 	body
@@ -27,8 +27,8 @@ html(class=""+baseTheme)
 			+header()
 			block content
 		block scripts
-			script(src=`/lib/popper.min.js`)
-			script(src=`/lib/tippy-bundle.iife.min.js`)
+			script(src=`./lib/popper.min.js`)
+			script(src=`./lib/tippy-bundle.iife.min.js`)
 			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
 		include ../images/sprite/sprite.svg
 		block body-end

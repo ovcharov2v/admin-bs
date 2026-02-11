@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const backBtn = document.querySelector('.modal-help__back-btn');
-  backBtn.addEventListener('click', () => modalHelp.classList.remove('modal-help--slide-show'))
+  if(backBtn) {
+    backBtn.addEventListener('click', () => modalHelp.classList.remove('modal-help--slide-show'))
+  }
 })
 
