@@ -250,6 +250,14 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 24px; }
+  .page__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 24px; }
   .page__title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -272,6 +280,13 @@ a {
     font-size: 14px;
     line-height: 1;
     color: var(--color-text2); }
+  .page__header-select-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: minmax(0, 1fr) 12px minmax(0, 1fr);
+        grid-template: auto/repeat(2, minmax(0, 1fr));
+    grid-gap: 12px; }
   .page__info-card-grid {
     display: -ms-grid;
     display: grid;
@@ -833,6 +848,8 @@ a {
       font-size: 12px; }
     .form-group__input--transparent {
       background-color: transparent !important; }
+    .form-group__input--main-bg {
+      background-color: var(--color-bg2) !important; }
     .form-group--action .form-group__input {
       padding-right: 32px; }
     .form-group--search .form-group__input {
