@@ -811,8 +811,17 @@ a {
       color: var(--color-text2); }
     .form-group__input::-ms-input-placeholder {
       color: var(--color-text2); }
-    .form-group__input::placeholder {
+    .form-group__input::placeholder, .form-group__input:empty {
       color: var(--color-text2); }
+    .form-group__input[type="date"] {
+      -moz-appearance: textfield; }
+      .form-group__input[type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+        cursor: pointer; }
+      .form-group__input[type="date"]::-moz-calendar-picker-indicator {
+        display: none; }
+      .form-group__input[type="date"]::-ms-clear {
+        display: none; }
     .form-group__input:hover {
       border-color: var(--color-border) !important; }
     .form-group__input:focus {
@@ -851,6 +860,8 @@ a {
     transition: color 0.2s ease; }
     .form-group__action-btn:hover {
       color: var(--color-text1); }
+    .form-group__action-btn--calendar {
+      pointer-events: none; }
     .form-group--complete .form-group__action-btn {
       color: #3BC363; }
     .form-group--error .form-group__action-btn {
@@ -2050,15 +2061,21 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transform: translateY(1px);
+        -ms-transform: translateY(1px);
+            transform: translateY(1px);
     width: 14px;
     height: 14px;
     margin-left: 2px;
     padding: 0;
     border: none;
     border-radius: 50%;
+    background-color: transparent;
     -webkit-transition: background-color 0.2s ease, color 0.2s ease;
     transition: background-color 0.2s ease, color 0.2s ease;
     color: inherit; }
+    .label__close:hover {
+      color: var(--color-text1); }
   .label__close-icon {
     display: block;
     width: 100%;
@@ -2076,11 +2093,6 @@ a {
     background-color: #D9F0F5; }
   .theme-light .label--dark-violet {
     background-color: #C2BAF9; }
-  .theme-light .label__close {
-    background-color: rgba(255, 255, 255, 0.3); }
-    .theme-light .label__close:hover {
-      background-color: #fff;
-      color: var(--color-text1); }
 
 .theme-dark .label {
   background-color: #373737; }
@@ -2095,11 +2107,6 @@ a {
   .theme-dark .label--dark-violet {
     background-color: #393459;
     color: #856CEF; }
-  .theme-dark .label__close {
-    background-color: rgba(255, 255, 255, 0.05); }
-    .theme-dark .label__close:hover {
-      background-color: transparent;
-      color: var(--color-text1); }
 
 .view-list .card {
   display: -ms-grid;
